@@ -3,7 +3,6 @@ package com.clabsbbpos.clabs;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
-
 public class LoginActivity extends ActionBarActivity {
 
     @Override

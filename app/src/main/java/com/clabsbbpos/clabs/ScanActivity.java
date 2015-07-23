@@ -2,6 +2,7 @@ package com.clabsbbpos.clabs;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.hardware.Camera.CameraInfo;
@@ -199,7 +200,8 @@ public class ScanActivity extends Activity {
         @Override
         public void onClick(View v) {
             mCamera.takePicture(null, null, mPicture);
-
+            Intent intent = new Intent(myContext, InstructionActivity.class);
+            startActivity(intent);
         }
     };
 

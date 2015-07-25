@@ -17,8 +17,8 @@
             android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25px"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="25px"
             android:text="5:10 AM"
             android:textSize="45px" />
 
@@ -29,8 +29,8 @@
             android:layout_below="@id/time"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="25px"
-            android:textSize="30px"
-            android:text="Thursday 23 July 2015" />
+            android:text="Thursday 23 July 2015"
+            android:textSize="30px" />
 
         <RelativeLayout
             android:id="@+id/weather_layout"
@@ -41,11 +41,11 @@
 
             <ImageView
                 android:id="@+id/weather"
-                android:tint="@color/theme_color"
                 android:layout_width="40px"
                 android:layout_height="40px"
                 android:layout_marginLeft="143px"
-                android:src="@drawable/cloudyday" />
+                android:src="@drawable/cloudyday"
+                android:tint="@color/theme_color" />
 
             <TextView
                 android:id="@+id/temperature"
@@ -61,16 +61,21 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="30px"
-            android:layout_marginTop="25px"
             android:layout_alignParentBottom="true"
+            android:layout_marginTop="25px"
             android:background="@drawable/info_box">
 
             <TextView
+                android:id="@+id/marguee_message"
                 android:layout_width="match_parent"
                 android:layout_height="30px"
+                android:ellipsize="marquee"
+                android:focusable="false"
                 android:gravity="center"
-                android:text="~!~!~!~!~!~!~"
-
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
                 android:textSize="20sp" />
         </RelativeLayout>
     </RelativeLayout>

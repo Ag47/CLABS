@@ -3,37 +3,25 @@ package com.clabsbbpos.clabs;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-public class HomeActivity extends ActionBarActivity {
+public class MyStayActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_home);
+//        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+//        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_mystay);
 
-        SimpleDateFormat currentTimeFormat = new SimpleDateFormat("h:mm a");
-        String currentTime = currentTimeFormat.format(new Date()).toString().toUpperCase();
-        TextView time = (TextView) findViewById(R.id.time);
-        time.setText(currentTime);
+        // custom action bar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        SimpleDateFormat currentDateFormat = new SimpleDateFormat("EEEE d MMMM yyyy");
-        String currentDate = currentDateFormat.format(new Date());
-        TextView date = (TextView) findViewById(R.id.date);
-        date.setText(currentDate);
-
-        Typeface infoFont = Typeface.createFromAsset(getAssets(), "fonts/arial.ttf");
         Typeface hotelFont = Typeface.createFromAsset(getAssets(), "fonts/OptimusPrinceps.ttf");
 
         TextView hotelName = (TextView) findViewById(R.id.hotel_name);
@@ -41,16 +29,6 @@ public class HomeActivity extends ActionBarActivity {
 
         TextView roomNumber = (TextView) findViewById(R.id.room_number);
         roomNumber.setTypeface(hotelFont);
-
-        time.setTypeface(infoFont);
-        date.setTypeface(infoFont);
-
-        TextView temperature = (TextView) findViewById(R.id.temperature);
-        temperature.setTypeface(infoFont);
-
-        TextView marqueeMessage = (TextView) findViewById(R.id.marguee_message);
-        marqueeMessage.setTypeface(infoFont);
-        marqueeMessage.setSelected(true);
     }
 
     @Override
@@ -70,6 +48,15 @@ public class HomeActivity extends ActionBarActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }
+
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+//                Intent intent = new Intent(this, MainActivity.class);
+//                startActivity(intent);
+                onBackPressed();
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

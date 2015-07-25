@@ -1,32 +1,50 @@
 package com.clabsbbpos.clabs;
 
-import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class HomeActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_home);
 
-        // TODO hotel logo
-        TextView checkIn = (TextView) findViewById(R.id.checkIn);
-        checkIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // TODO switch back to LoginActiviy
-                Intent intent = new Intent(getApplicationContext(), ScanActivity.class);
-                startActivity(intent);
-            }
-        });
+        SimpleDateFormat currentTimeFormat = new SimpleDateFormat("h:mm a");
+        String currentTime = currentTimeFormat.format(new Date()).toString().toUpperCase();
+        TextView time = (TextView) findViewById(R.id.time);
+        time.setText(currentTime);
 
-        getSupportActionBar().hide();
+        SimpleDateFormat currentDateFormat = new SimpleDateFormat("EEEE d MMMM yyyy");
+        String currentDate = currentDateFormat.format(new Date());
+        TextView date = (TextView) findViewById(R.id.date);
+        date.setText(currentDate);
+
+        Typeface infoFont = Typeface.createFromAsset(getAssets(), "fonts/arial.ttf");
+        Typeface hotelFont = Typeface.createFromAsset(getAssets(), "fonts/OptimusPrinceps.ttf");
+
+        TextView hotelName = (TextView) findViewById(R.id.hotel_name);
+        hotelName.setTypeface(hotelFont);
+
+        TextView roomNumber = (TextView) findViewById(R.id.room_number);
+        roomNumber.setTypeface(hotelFont);
+
+        time.setTypeface(infoFont);
+        date.setTypeface(infoFont);
+
+        TextView temperature = (TextView) findViewById(R.id.temperature);
+        temperature.setTypeface(infoFont);
     }
 
     @Override

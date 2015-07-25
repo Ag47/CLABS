@@ -26,7 +26,7 @@ public class StartActivity extends ActionBarActivity {
             }
         });
 
-        getSupportActionBar().hide();
+
     }
 
     @Override

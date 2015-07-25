@@ -3,15 +3,12 @@ package com.clabsbbpos.clabs;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 import com.google.common.collect.Lists;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -32,6 +29,7 @@ public class InstructionActivity extends ActionBarActivity {
         viewPager = (ScrollerViewPager) findViewById(R.id.view_pager);
         SpringIndicator springIndicator = (SpringIndicator) findViewById(R.id.indicator);
 
+        // custom action bar
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
 //        setSupportActionBar(toolbar);
 
@@ -48,7 +46,8 @@ public class InstructionActivity extends ActionBarActivity {
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(this, );
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(intent);
             }
         });
     }

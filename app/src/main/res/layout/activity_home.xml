@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="25px"
+            android:layout_marginTop="15px"
             android:text="5:10 AM"
             android:textSize="45px" />
 
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/time"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="25px"
+            android:layout_marginTop="15px"
             android:text="Thursday 23 July 2015"
             android:textSize="30px" />
 
@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/date"
-            android:layout_marginTop="25px">
+            android:layout_marginTop="15px">
 
             <ImageView
                 android:id="@+id/weather"
@@ -60,7 +60,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="30px"
+            android:layout_height="35px"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="25px"
             android:background="@drawable/info_box">
@@ -69,6 +69,8 @@
                 android:id="@+id/marguee_message"
                 android:layout_width="match_parent"
                 android:layout_height="30px"
+                android:paddingLeft="10px"
+                android:paddingRight="10px"
                 android:ellipsize="marquee"
                 android:focusable="false"
                 android:gravity="center"
@@ -89,43 +91,101 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="457px"
+            android:layout_height="417px"
             android:orientation="vertical"
             android:weightSum="3">
 
             <LinearLayout
+                android:id="@+id/gridmenu_layout"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
-                <ImageView
+                <RelativeLayout
+                    android:id="@+id/mystay_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="@drawable/icon_bg"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:src="@drawable/ic_roomcontrol"
+                    android:padding="2px">
 
-                    android:textSize="28sp" />
+                    <ImageView
+                        android:id="@+id/mystay_icon"
+                        android:layout_width="80px"
+                        android:layout_height="80px"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_facilities2" />
 
-                <TextView
+                    <TextView
+                        android:id="@+id/mystay_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mystay_icon"
+                        android:layout_marginTop="5px"
+                        android:gravity="center"
+                        android:text="My Stay"
+                        android:textColor="@color/theme_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/roomcontrol_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="@drawable/icon_bg"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:text="Test"
+                    android:padding="2px">
 
-                    android:textSize="28sp" />
+                    <ImageView
+                        android:id="@+id/roomcontrol_icon"
+                        android:layout_width="80px"
+                        android:layout_height="80px"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_roomcontrol" />
 
-                <TextView
+                    <TextView
+                        android:id="@+id/roomcontrol_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/roomcontrol_icon"
+                        android:layout_marginTop="5px"
+                        android:gravity="center"
+                        android:text="Room\nControl"
+                        android:textColor="@color/theme_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/roomservice_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="@drawable/icon_bg"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:text="Test"
+                    android:padding="2px">
 
-                    android:textSize="28sp" />
+                    <ImageView
+                        android:id="@+id/roomservice_icon"
+                        android:layout_width="80px"
+                        android:layout_height="80px"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_roomservice" />
+
+                    <TextView
+                        android:id="@+id/roomservice_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/roomservice_icon"
+                        android:layout_marginTop="5px"
+                        android:gravity="center"
+                        android:text="Room\nService"
+                        android:textColor="@color/theme_color" />
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -136,67 +196,181 @@
                 android:orientation="horizontal"
                 android:weightSum="3">
 
-                <TextView
+                <RelativeLayout
+                    android:id="@+id/hotelfacilities_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="@drawable/icon_bg"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:text="Test"
-                    android:textSize="28sp" />
+                    android:padding="2px">
 
-                <TextView
+                    <ImageView
+                        android:id="@+id/hotelfacilities_icon"
+                        android:layout_width="80px"
+                        android:layout_height="80px"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_facilities" />
+
+                    <TextView
+                        android:id="@+id/hotelfacilities_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/hotelfacilities_icon"
+                        android:layout_marginTop="5px"
+                        android:gravity="center"
+                        android:text="Hotel\nFacilities"
+                        android:textColor="@color/theme_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/myreservations_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="@drawable/icon_bg"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:text="Test"
+                    android:padding="2px">
 
-                    android:textSize="28sp" />
+                    <ImageView
+                        android:id="@+id/myreservations_icon"
+                        android:layout_width="80px"
+                        android:layout_height="80px"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_roomcontrol" />
 
-                <TextView
+                    <TextView
+                        android:id="@+id/myreservations_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/myreservations_icon"
+                        android:layout_marginTop="5px"
+                        android:gravity="center"
+                        android:text="My\nReservations"
+                        android:textColor="@color/theme_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/directphonecall_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="@drawable/icon_bg"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:text="Test"
+                    android:padding="2px">
 
-                    android:textSize="28sp" />
+                    <ImageView
+                        android:id="@+id/directphonecall_icon"
+                        android:layout_width="80px"
+                        android:layout_height="80px"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_call" />
+
+                    <TextView
+                        android:id="@+id/directphonecall_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/directphonecall_icon"
+                        android:layout_marginTop="5px"
+                        android:gravity="center"
+                        android:text="Direct\nPhone Calls"
+                        android:textColor="@color/theme_color" />
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
-                <TextView
+                <RelativeLayout
+                    android:id="@+id/more_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="@drawable/icon_bg"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:text="Test"
+                    android:padding="2px">
 
-                    android:textSize="28sp" />
+                    <ImageView
+                        android:id="@+id/more_icon"
+                        android:layout_width="80px"
+                        android:layout_height="80px"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_more" />
 
-                <TextView
+                    <TextView
+                        android:id="@+id/more_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/more_icon"
+                        android:layout_marginTop="5px"
+                        android:gravity="center"
+                        android:text="More"
+                        android:textColor="@color/theme_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/location_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="@drawable/icon_bg"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:text="Test"
+                    android:padding="2px">
 
-                    android:textSize="28sp" />
+                    <ImageView
+                        android:id="@+id/location_icon"
+                        android:layout_width="80px"
+                        android:layout_height="80px"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_call" />
 
-                <TextView
+                    <TextView
+                        android:id="@+id/location_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/location_icon"
+                        android:layout_marginTop="5px"
+                        android:gravity="center"
+                        android:text="Location &amp;\n Transports"
+                        android:textColor="@color/theme_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/checkout_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:background="@drawable/icon_bg"
+                    android:clickable="true"
                     android:gravity="center"
-                    android:text="Test"
+                    android:padding="2px">
 
-                    android:textSize="28sp" />
+                    <ImageView
+                        android:id="@+id/checkout_icon"
+                        android:layout_width="80px"
+                        android:layout_height="80px"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_call" />
+
+                    <TextView
+                        android:id="@+id/checkout_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/checkout_icon"
+                        android:layout_marginTop="5px"
+                        android:gravity="center"
+                        android:text="Check Out"
+                        android:textColor="@color/theme_color" />
+                </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>

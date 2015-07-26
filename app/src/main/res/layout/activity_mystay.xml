@@ -75,9 +75,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/footer_layout"
-        android:layout_marginBottom="30px"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/info_box"
+        android:layout_marginBottom="30px"
+        android:background="@drawable/button_bg"
+        android:clickable="true"
         android:padding="10px"
         android:text="My E-billing"
         android:textSize="45px" />

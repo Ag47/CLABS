@@ -15,7 +15,7 @@ public class StartActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        // TODO hotel logo
+        // TODO multi Language support
         TextView checkIn = (TextView) findViewById(R.id.checkIn);
         checkIn.setOnClickListener(new View.OnClickListener() {
             @Override

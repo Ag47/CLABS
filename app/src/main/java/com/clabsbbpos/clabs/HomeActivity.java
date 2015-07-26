@@ -1,15 +1,19 @@
 package com.clabsbbpos.clabs;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v7.app.ActionBarActivity;
+import android.view.HapticFeedbackConstants;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -35,13 +39,9 @@ public class HomeActivity extends ActionBarActivity {
 
         Typeface infoFont = Typeface.createFromAsset(getAssets(), "fonts/arial.ttf");
         Typeface hotelFont = Typeface.createFromAsset(getAssets(), "fonts/OptimusPrinceps.ttf");
+        Typeface iconFont = Typeface.createFromAsset(getAssets(), "fonts/NuevaStd-Bold.otf");
 
-        TextView hotelName = (TextView) findViewById(R.id.hotel_name);
-        hotelName.setTypeface(hotelFont);
-
-        TextView roomNumber = (TextView) findViewById(R.id.room_number);
-        roomNumber.setTypeface(hotelFont);
-
+        // info box TextView
         time.setTypeface(infoFont);
         date.setTypeface(infoFont);
 
@@ -51,6 +51,136 @@ public class HomeActivity extends ActionBarActivity {
         TextView marqueeMessage = (TextView) findViewById(R.id.marguee_message);
         marqueeMessage.setTypeface(infoFont);
         marqueeMessage.setSelected(true);
+
+        // menu icon TextView
+        TextView mystayTV = (TextView) findViewById(R.id.mystay_tv);
+        mystayTV.setTypeface(iconFont);
+
+        TextView roomcontrolTV = (TextView) findViewById(R.id.roomcontrol_tv);
+        roomcontrolTV.setTypeface(iconFont);
+
+        TextView roomserviceTV = (TextView) findViewById(R.id.roomservice_tv);
+        roomserviceTV.setTypeface(iconFont);
+
+        TextView hotelfacilitiesTV = (TextView) findViewById(R.id.hotelfacilities_tv);
+        hotelfacilitiesTV.setTypeface(iconFont);
+
+        TextView myReservationsTV = (TextView) findViewById(R.id.myreservations_tv);
+        myReservationsTV.setTypeface(iconFont);
+
+        TextView callTV = (TextView) findViewById(R.id.directphonecall_tv);
+        callTV.setTypeface(iconFont);
+
+        TextView moreTV = (TextView) findViewById(R.id.more_tv);
+        moreTV.setTypeface(iconFont);
+
+        TextView locationTV = (TextView) findViewById(R.id.location_tv);
+        locationTV.setTypeface(iconFont);
+
+        TextView checkoutTV = (TextView) findViewById(R.id.checkout_tv);
+        checkoutTV.setTypeface(iconFont);
+
+        // footer TextView
+        TextView hotelName = (TextView) findViewById(R.id.hotel_name);
+        hotelName.setTypeface(hotelFont);
+
+        TextView roomNumber = (TextView) findViewById(R.id.room_number);
+        roomNumber.setTypeface(hotelFont);
+
+        // menu icon intent
+        // TODO vibrate when click for accessibility
+        final Vibrator vibrator = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
+
+        RelativeLayout mystayLayout = (RelativeLayout) findViewById(R.id.mystay_layout);
+        mystayLayout.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                v.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
+                vibrator.vibrate(100);
+                return false;
+            }
+        });
+        mystayLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), MyStayActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        RelativeLayout roomcontrolLayout = (RelativeLayout) findViewById(R.id.roomcontrol_layout);
+        roomcontrolLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), .class);
+//                startActivity(intent);
+            }
+        });
+
+        RelativeLayout roomserviceLayout = (RelativeLayout) findViewById(R.id.roomservice_layout);
+        roomcontrolLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), .class);
+//                startActivity(intent);
+            }
+        });
+
+        RelativeLayout hotelfacilitiesLayout = (RelativeLayout) findViewById(R.id.hotelfacilities_layout);
+        hotelfacilitiesLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), .class);
+//                startActivity(intent);
+            }
+        });
+
+        RelativeLayout myReservationsLayout = (RelativeLayout) findViewById(R.id.myreservations_layout);
+        myReservationsLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), .class);
+//                startActivity(intent);
+            }
+        });
+
+        RelativeLayout callLayout = (RelativeLayout) findViewById(R.id.directphonecall_layout);
+        callLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), .class);
+//                startActivity(intent);
+            }
+        });
+
+        RelativeLayout moreLayout = (RelativeLayout) findViewById(R.id.more_layout);
+        moreLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), .class);
+//                startActivity(intent);
+            }
+        });
+
+        RelativeLayout locationLayout = (RelativeLayout) findViewById(R.id.location_layout);
+        locationLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), .class);
+//                startActivity(intent);
+            }
+        });
+
+        RelativeLayout checkoutLayout = (RelativeLayout) findViewById(R.id.checkout_layout);
+        checkoutLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), .class);
+//                startActivity(intent);
+            }
+        });
+
     }
 
     @Override

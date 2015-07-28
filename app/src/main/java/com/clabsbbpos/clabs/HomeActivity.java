@@ -113,13 +113,13 @@ public class HomeActivity extends ActionBarActivity {
         roomcontrolLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), .class);
-//                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), RoomControlActivity.class);
+                startActivity(intent);
             }
         });
 
         RelativeLayout roomserviceLayout = (RelativeLayout) findViewById(R.id.roomservice_layout);
-        roomcontrolLayout.setOnClickListener(new View.OnClickListener() {
+        roomserviceLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                Intent intent = new Intent(getApplicationContext(), .class);

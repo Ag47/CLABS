@@ -1,5 +1,6 @@
 package com.clabsbbpos.clabs;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -11,14 +12,13 @@ import android.widget.TextView;
 
 public class InRoomDiningActivity extends ActionBarActivity {
 
-    private int temperatureValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
 //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_roomservice);
+        setContentView(R.layout.activity_inroomdining);
 
         // custom action bar
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
@@ -27,9 +27,22 @@ public class InRoomDiningActivity extends ActionBarActivity {
 
         Typeface hotelFont = Typeface.createFromAsset(getAssets(), "fonts/OptimusPrinceps.ttf");
         Typeface iconFont = Typeface.createFromAsset(getAssets(), "fonts/NuevaStd-Bold.otf");
+        Typeface arialFont = Typeface.createFromAsset(getAssets(), "fonts/arial.ttf");
 
         TextView activityTitle = (TextView) findViewById(R.id.activity_title);
         activityTitle.setTypeface(iconFont);
+
+        TextView breakfast = (TextView) findViewById(R.id.breakfast);
+        breakfast.setTypeface(arialFont);
+
+        TextView allDayDining = (TextView) findViewById(R.id.allDayDining);
+        allDayDining.setTypeface(arialFont);
+
+        TextView lateNight = (TextView) findViewById(R.id.lateNight);
+        lateNight.setTypeface(arialFont);
+
+        TextView childrenMeal = (TextView) findViewById(R.id.childrenMeal);
+        childrenMeal.setTypeface(arialFont);
 
         TextView hotelName = (TextView) findViewById(R.id.hotel_name);
         hotelName.setTypeface(hotelFont);
@@ -37,15 +50,13 @@ public class InRoomDiningActivity extends ActionBarActivity {
         TextView roomNumber = (TextView) findViewById(R.id.room_number);
         roomNumber.setTypeface(hotelFont);
 
-        TextView inRoomDining = (TextView) findViewById(R.id.inRoomDining);
-        inRoomDining.setOnClickListener(new View.OnClickListener() {
+        breakfast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), .class);
-//                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                startActivity(intent);
             }
         });
-
     }
 
     @Override

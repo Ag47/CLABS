@@ -1,11 +1,13 @@
 package com.clabsbbpos.clabs;
 
+import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.HapticFeedbackConstants;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,10 +17,16 @@ import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import com.bbpos.wisepad.WisePadController;
+import com.bbpos.wisepad.WisePosController;
 
-public class HomeActivity extends ActionBarActivity {
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Hashtable;
+import java.util.List;
+
+public class HomeActivity extends ActionBarActivity implements WisePosController.WisePosControllerListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,7 +111,6 @@ public class HomeActivity extends ActionBarActivity {
         mystayLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(getApplicationContext(), MyStayActivity.class);
                 startActivity(intent);
             }
@@ -122,8 +129,8 @@ public class HomeActivity extends ActionBarActivity {
         roomserviceLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), .class);
-//                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), RoomServiceActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -203,5 +210,357 @@ public class HomeActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onSerialConnected() {
+
+    }
+
+    @Override
+    public void onSerialDisconnected() {
+
+    }
+
+    @Override
+    public void onRequestDisplayAsterisk(int i) {
+
+    }
+
+    @Override
+    public void onWaitingForCard(WisePadController.CheckCardMode checkCardMode) {
+
+    }
+
+    @Override
+    public void onWaitingReprintOrPrintNext() {
+
+    }
+
+    @Override
+    public void onBTv2Detected() {
+
+    }
+
+    @Override
+    public void onBTv2DeviceListRefresh(List<BluetoothDevice> list) {
+
+    }
+
+    @Override
+    public void onBTv2Connected(BluetoothDevice bluetoothDevice) {
+
+    }
+
+    @Override
+    public void onBTv2Disconnected() {
+
+    }
+
+    @Override
+    public void onBTv2ScanStopped() {
+
+    }
+
+    @Override
+    public void onBTv2ScanTimeout() {
+
+    }
+
+    @Override
+    public void onBTv4DeviceListRefresh(List<BluetoothDevice> list) {
+
+    }
+
+    @Override
+    public void onBTv4Connected() {
+
+    }
+
+    @Override
+    public void onBTv4Disconnected() {
+
+    }
+
+    @Override
+    public void onBTv4ScanStopped() {
+
+    }
+
+    @Override
+    public void onBTv4ScanTimeout() {
+
+    }
+
+    @Override
+    public void onReturnCheckCardResult(WisePadController.CheckCardResult checkCardResult, Hashtable<String, String> hashtable) {
+
+    }
+
+    @Override
+    public void onReturnCancelCheckCardResult(boolean b) {
+
+    }
+
+    @Override
+    public void onReturnStartEmvResult(WisePadController.StartEmvResult startEmvResult, String s) {
+
+    }
+
+    @Override
+    public void onReturnDeviceInfo(Hashtable<String, String> hashtable) {
+
+    }
+
+    @Override
+    public void onReturnEmvTransactionLog(String[] strings) {
+
+    }
+
+    @Override
+    public void onReturnEmvLoadLog(String[] strings) {
+
+    }
+
+    @Override
+    public void onReturnTransactionResult(WisePadController.TransactionResult transactionResult) {
+
+    }
+
+    @Override
+    public void onReturnTransactionResult(WisePadController.TransactionResult transactionResult, Hashtable<String, String> hashtable) {
+
+    }
+
+    @Override
+    public void onReturnBatchData(String s) {
+
+    }
+
+    @Override
+    public void onReturnTransactionLog(String s) {
+
+    }
+
+    @Override
+    public void onReturnReversalData(String s) {
+
+    }
+
+    @Override
+    public void onReturnAmountConfirmResult(boolean b) {
+
+    }
+
+    @Override
+    public void onReturnPinEntryResult(WisePadController.PinEntryResult pinEntryResult, Hashtable<String, String> hashtable) {
+
+    }
+
+    @Override
+    public void onReturnPrintResult(WisePadController.PrintResult printResult) {
+
+    }
+
+    @Override
+    public void onReturnAmount(Hashtable<String, String> hashtable) {
+
+    }
+
+    @Override
+    public void onReturnUpdateTerminalSettingResult(WisePadController.TerminalSettingStatus terminalSettingStatus) {
+
+    }
+
+    @Override
+    public void onReturnReadTerminalSettingResult(WisePadController.TerminalSettingStatus terminalSettingStatus, String s) {
+
+    }
+
+    @Override
+    public void onReturnEnableInputAmountResult(boolean b) {
+
+    }
+
+    @Override
+    public void onReturnDisableInputAmountResult(boolean b) {
+
+    }
+
+    @Override
+    public void onReturnPhoneNumber(WisePadController.PhoneEntryResult phoneEntryResult, String s) {
+
+    }
+
+    @Override
+    public void onReturnEmvCardBalance(boolean b, String s) {
+
+    }
+
+    @Override
+    public void onReturnEmvCardDataResult(boolean b, String s) {
+
+    }
+
+    @Override
+    public void onReturnEmvCardNumber(String s) {
+
+    }
+
+    @Override
+    public void onReturnMagStripeCardNumber(WisePadController.CheckCardResult checkCardResult, String s) {
+
+    }
+
+    @Override
+    public void onReturnEncryptDataResult(boolean b, Hashtable<String, String> hashtable) {
+
+    }
+
+    @Override
+    public void onReturnInjectSessionKeyResult(boolean b) {
+
+    }
+
+    @Override
+    public void onReturnViposBatchExchangeApduResult(Hashtable<Integer, String> hashtable) {
+
+    }
+
+    @Override
+    public void onReturnViposExchangeApduResult(String s) {
+
+    }
+
+    @Override
+    public void onReturnPowerOnIccResult(boolean b, String s, String s1, int i) {
+
+    }
+
+    @Override
+    public void onReturnPowerOffIccResult(boolean b) {
+
+    }
+
+    @Override
+    public void onReturnApduResult(boolean b, String s, int i) {
+
+    }
+
+    @Override
+    public void onReturnApduResultWithPkcs7Padding(boolean b, String s) {
+
+    }
+
+    @Override
+    public void onRequestSelectApplication(ArrayList<String> arrayList) {
+
+    }
+
+    @Override
+    public void onRequestSetAmount() {
+
+    }
+
+    @Override
+    public void onRequestPinEntry(WisePadController.PinEntrySource pinEntrySource) {
+
+    }
+
+    @Override
+    public void onRequestCheckServerConnectivity() {
+
+    }
+
+    @Override
+    public void onRequestOnlineProcess(String s) {
+
+    }
+
+    @Override
+    public void onRequestTerminalTime() {
+        Log.i("BBPOS", "termianl TIMe");
+
+
+    }
+
+    @Override
+    public void onRequestDisplayText(WisePadController.DisplayText displayText) {
+
+    }
+
+    @Override
+    public void onRequestClearDisplay() {
+
+    }
+
+    @Override
+    public void onRequestReferProcess(String s) {
+
+    }
+
+    @Override
+    public void onRequestAdviceProcess(String s) {
+
+    }
+
+    @Override
+    public void onRequestFinalConfirm() {
+
+    }
+
+    @Override
+    public void onRequestVerifyID(String s) {
+
+    }
+
+    @Override
+    public void onRequestInsertCard() {
+
+    }
+
+    @Override
+    public void onRequestPrintData(int i, boolean b) {
+
+    }
+
+    @Override
+    public void onPrintDataCancelled() {
+
+    }
+
+    @Override
+    public void onPrintDataEnd() {
+
+    }
+
+    @Override
+    public void onBatteryLow(WisePadController.BatteryStatus batteryStatus) {
+
+    }
+
+    @Override
+    public void onBTv2DeviceNotFound() {
+
+    }
+
+    @Override
+    public void onAudioDeviceNotFound() {
+
+    }
+
+    @Override
+    public void onDevicePlugged() {
+
+    }
+
+    @Override
+    public void onDeviceUnplugged() {
+
+    }
+
+    @Override
+    public void onError(WisePadController.Error error, String s) {
+
     }
 }

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+        
+        <RadioButton 
+            android:id="@+id/swipeRadioButton"
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/swipe"
+        	android:textSize="30sp" />
+        
+        <RadioButton
+            android:id="@+id/insertRadioButton" 
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/insert"
+        	android:textSize="30sp" />
+        
+        <RadioButton 
+            android:id="@+id/tapRadioButton"
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/tap"
+        	android:textSize="30sp" />
+        
+        <RadioButton 
+            android:id="@+id/swipeOrInsertRadioButton"
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:text="@string/swipe_or_insert"
+        	android:textSize="30sp" />
+        
+    </RadioGroup>
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <Button
+	        android:id="@+id/cancelButton"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="@string/cancel" />
+        
+    </LinearLayout>
+        
+</LinearLayout>

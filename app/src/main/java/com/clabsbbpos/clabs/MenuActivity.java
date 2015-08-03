@@ -17,7 +17,7 @@ public class MenuActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 //        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
 //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_inroomdining);
+        setContentView(R.layout.activity_menu);
 
         // custom action bar
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
@@ -26,9 +26,26 @@ public class MenuActivity extends ActionBarActivity {
 
         Typeface hotelFont = Typeface.createFromAsset(getAssets(), "fonts/OptimusPrinceps.ttf");
         Typeface iconFont = Typeface.createFromAsset(getAssets(), "fonts/NuevaStd-Bold.otf");
+        Typeface arialFont = Typeface.createFromAsset(getAssets(), "fonts/arial.ttf");
 
         TextView activityTitle = (TextView) findViewById(R.id.activity_title);
         activityTitle.setTypeface(iconFont);
+
+        TextView mealType = (TextView) findViewById(R.id.mealType);
+        mealType.setTypeface(arialFont);
+
+        TextView timeServed = (TextView) findViewById(R.id.time_served);
+        timeServed.setTypeface(arialFont);
+
+        TextView set = (TextView) findViewById(R.id.set);
+        set.setTypeface(arialFont);
+
+        TextView totalPrice = (TextView) findViewById(R.id.totalPrice);
+        totalPrice.setTypeface(arialFont);
+
+        TextView order = (TextView) findViewById(R.id.order);
+        order.setTypeface(arialFont, Typeface.BOLD);
+
 
         TextView hotelName = (TextView) findViewById(R.id.hotel_name);
         hotelName.setTypeface(hotelFont);
@@ -36,14 +53,6 @@ public class MenuActivity extends ActionBarActivity {
         TextView roomNumber = (TextView) findViewById(R.id.room_number);
         roomNumber.setTypeface(hotelFont);
 
-        TextView breakfast = (TextView) findViewById(R.id.breakfast);
-        breakfast.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
-//                startActivity(intent);
-            }
-        });
     }
 
     @Override

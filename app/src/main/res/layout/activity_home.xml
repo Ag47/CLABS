@@ -44,7 +44,7 @@
                 android:layout_width="40px"
                 android:layout_height="40px"
                 android:layout_marginLeft="143px"
-                android:src="@drawable/cloudyday"
+                android:src="@drawable/ic_weather"
                 android:tint="@color/theme_color" />
 
             <TextView
@@ -69,12 +69,12 @@
                 android:id="@+id/marguee_message"
                 android:layout_width="match_parent"
                 android:layout_height="30px"
-                android:paddingLeft="10px"
-                android:paddingRight="10px"
                 android:ellipsize="marquee"
                 android:focusable="false"
                 android:gravity="center"
                 android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="10px"
+                android:paddingRight="10px"
                 android:scrollHorizontally="true"
                 android:singleLine="true"
                 android:text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
@@ -118,7 +118,7 @@
                         android:layout_width="80px"
                         android:layout_height="80px"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/ic_facilities2" />
+                        android:src="@drawable/ic_mystay" />
 
                     <TextView
                         android:id="@+id/mystay_tv"
@@ -239,7 +239,7 @@
                         android:layout_width="80px"
                         android:layout_height="80px"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/ic_roomcontrol" />
+                        android:src="@drawable/ic_myreservation" />
 
                     <TextView
                         android:id="@+id/myreservations_tv"
@@ -331,7 +331,7 @@
                         android:layout_width="80px"
                         android:layout_height="80px"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/ic_call" />
+                        android:src="@drawable/ic_location" />
 
                     <TextView
                         android:id="@+id/location_tv"
@@ -359,7 +359,7 @@
                         android:layout_width="80px"
                         android:layout_height="80px"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/ic_call" />
+                        android:src="@drawable/ic_checkout" />
 
                     <TextView
                         android:id="@+id/checkout_tv"

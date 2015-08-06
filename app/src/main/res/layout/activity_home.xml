@@ -67,7 +67,7 @@
 
             <TextView
                 android:id="@+id/marguee_message"
-                android:layout_width="match_parent"
+                android:layout_width="280px"
                 android:layout_height="30px"
                 android:ellipsize="marquee"
                 android:focusable="false"
@@ -79,6 +79,14 @@
                 android:singleLine="true"
                 android:text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
                 android:textSize="20sp" />
+            <TextView
+                android:id="@+id/checkOut"
+                android:layout_width="150px"
+                android:layout_height="30px"
+                android:text="Check-Out"
+                android:textSize="20sp"
+                android:layout_toRightOf="@id/marguee_message"
+                />
         </RelativeLayout>
     </RelativeLayout>
 

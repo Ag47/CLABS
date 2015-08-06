@@ -1,23 +1,22 @@
 package com.clabsbbpos.clabs;
 
-import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
-public class RoomServiceActivity extends ActionBarActivity {
+public class MiscellaneousActivity extends ActionBarActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
 //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_roomservice);
+        setContentView(R.layout.activity_menu);
 
         // custom action bar
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
@@ -31,45 +30,27 @@ public class RoomServiceActivity extends ActionBarActivity {
         TextView activityTitle = (TextView) findViewById(R.id.activity_title);
         activityTitle.setTypeface(iconFont);
 
-        TextView inRoomDining = (TextView) findViewById(R.id.inRoomDining);
-        inRoomDining.setTypeface(arialFont);
+        TextView mealType = (TextView) findViewById(R.id.mealType);
+        mealType.setTypeface(arialFont);
 
-        TextView houseKeeping = (TextView) findViewById(R.id.houseKeeping);
-        houseKeeping.setTypeface(arialFont);
+        TextView timeServed = (TextView) findViewById(R.id.time_served);
+        timeServed.setTypeface(arialFont);
 
-        TextView miscellaneous = (TextView) findViewById(R.id.miscellaneous);
-        miscellaneous.setTypeface(arialFont);
+        TextView set = (TextView) findViewById(R.id.set);
+        set.setTypeface(arialFont);
+
+        TextView totalPrice = (TextView) findViewById(R.id.totalPrice);
+        totalPrice.setTypeface(arialFont);
+
+        TextView order = (TextView) findViewById(R.id.order);
+        order.setTypeface(arialFont, Typeface.BOLD);
+
 
         TextView hotelName = (TextView) findViewById(R.id.hotel_name);
         hotelName.setTypeface(hotelFont);
 
         TextView roomNumber = (TextView) findViewById(R.id.room_number);
         roomNumber.setTypeface(hotelFont);
-
-        inRoomDining.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), InRoomDiningActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        houseKeeping.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), HouseKeepingActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // TODO miscellaneous Activity
-        miscellaneous.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), MiscellaneousActivity.class);
-//                startActivity(intent);
-            }
-        });
 
     }
 

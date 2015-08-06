@@ -22,9 +22,12 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.0'
+
+    // WisePOS API
+    compile files('libs/wisepadapi-android-2.5.1.jar')
+
     // SpringIndicator dependency
     compile 'com.github.chenupt.android:springindicator:1.0.2@aar'
     compile 'com.github.chenupt.android:multiplemodel:1.1.0@aar'
     compile 'com.google.guava:guava:18.0'
-    compile files('libs/wisepadapi-android-2.5.1.jar')
 }

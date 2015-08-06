@@ -24,7 +24,7 @@
                 android:layout_marginLeft="100px"
                 android:text="Room Control"
                 android:textColor="@color/white"
-                android:textSize="28px" />
+                android:textSize="40px" />
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
@@ -40,14 +40,16 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20px"
-                android:text="All lights" />
+                android:text="All lights"
+                android:textSize="35px" />
 
             <android.support.v7.widget.SwitchCompat
                 android:id="@+id/light_switch"
@@ -61,14 +63,16 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20px"
-                android:text="Air Conditioner" />
+                android:text="Air Conditioner"
+                android:textSize="35px" />
 
             <android.support.v7.widget.SwitchCompat
                 android:id="@+id/aircon_switch"
@@ -84,6 +88,7 @@
             android:id="@+id/temp_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
             android:visibility="gone">
 
             <TextView
@@ -91,23 +96,28 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20px"
-                android:text="Temperature" />
+                android:text="Temperature"
+                android:textSize="35px" />
 
             <TextView
                 android:id="@+id/temp_minus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5px"
+                android:layout_marginTop="5px"
                 android:layout_toLeftOf="@+id/temperature"
-                android:text="-" />
+                android:text="-"
+                android:textSize="35px" />
 
             <TextView
                 android:id="@+id/temperature"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5px"
+                android:layout_marginTop="5px"
                 android:layout_toLeftOf="@+id/temp_plus"
-                android:text="25°C" />
+                android:text="25°C"
+                android:textSize="35px" />
 
             <TextView
                 android:id="@+id/temp_plus"
@@ -115,7 +125,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10px"
-                android:text="+" />
+                android:layout_marginTop="5px"
+                android:text="+"
+                android:textSize="35px" />
 
         </RelativeLayout>
 
@@ -130,7 +142,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20px"
-                android:text="Swing" />
+                android:text="Swing"
+                android:textSize="35px" />
 
             <android.support.v7.widget.SwitchCompat
                 android:layout_width="wrap_content"
@@ -152,7 +165,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20px"
-                android:text="Fan Speed" />
+                android:text="Fan Speed"
+                android:textSize="35px" />
 
             <android.support.v7.widget.SwitchCompat
                 android:layout_width="wrap_content"
@@ -165,14 +179,16 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20px"
-                android:text="TV" />
+                android:text="TV"
+                android:textSize="35px" />
 
             <android.support.v7.widget.SwitchCompat
                 android:layout_width="wrap_content"
@@ -185,14 +201,16 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20px"
-                android:text="Do not Disturb" />
+                android:text="Do not Disturb"
+                android:textSize="35px" />
 
             <android.support.v7.widget.SwitchCompat
                 android:layout_width="wrap_content"

@@ -1,6 +1,5 @@
 package com.clabsbbpos.clabs;
 
-import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -8,16 +7,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class RoomServiceActivity extends ActionBarActivity {
+public class HouseKeepingActivity extends ActionBarActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
 //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_roomservice);
+        setContentView(R.layout.activity_housekeeping);
 
         // custom action bar
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
@@ -31,45 +33,45 @@ public class RoomServiceActivity extends ActionBarActivity {
         TextView activityTitle = (TextView) findViewById(R.id.activity_title);
         activityTitle.setTypeface(iconFont);
 
-        TextView inRoomDining = (TextView) findViewById(R.id.inRoomDining);
-        inRoomDining.setTypeface(arialFont);
-
-        TextView houseKeeping = (TextView) findViewById(R.id.houseKeeping);
-        houseKeeping.setTypeface(arialFont);
-
-        TextView miscellaneous = (TextView) findViewById(R.id.miscellaneous);
-        miscellaneous.setTypeface(arialFont);
-
         TextView hotelName = (TextView) findViewById(R.id.hotel_name);
         hotelName.setTypeface(hotelFont);
 
+        RelativeLayout makeUpLayout = (RelativeLayout) findViewById(R.id.makeUp_layout);
+        RelativeLayout doNotDisturbLayout = (RelativeLayout) findViewById(R.id.doNotDisturb_layout);
+
+        final ImageView makeUpTick = (ImageView) findViewById(R.id.makeUp_tick);
+        final ImageView doNotDisturbTick = (ImageView) findViewById(R.id.doNotDisturb_tick);
+
+        makeUpLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (makeUpTick.getVisibility() == View.GONE)
+                    if (doNotDisturbTick.getVisibility() == View.VISIBLE) {
+                        makeUpTick.setVisibility(View.VISIBLE);
+                        doNotDisturbTick.setVisibility(View.GONE);
+                    } else
+                        makeUpTick.setVisibility(View.VISIBLE);
+                else
+                    makeUpTick.setVisibility(View.GONE);
+            }
+        });
+
+        doNotDisturbLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (doNotDisturbTick.getVisibility() == View.GONE)
+                    if (makeUpTick.getVisibility() == View.VISIBLE) {
+                        doNotDisturbTick.setVisibility(View.VISIBLE);
+                        makeUpTick.setVisibility(View.GONE);
+                    } else
+                        doNotDisturbTick.setVisibility(View.VISIBLE);
+                else
+                    doNotDisturbTick.setVisibility(View.GONE);
+            }
+        });
+
         TextView roomNumber = (TextView) findViewById(R.id.room_number);
         roomNumber.setTypeface(hotelFont);
-
-        inRoomDining.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), InRoomDiningActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        houseKeeping.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), HouseKeepingActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        // TODO miscellaneous Activity
-        miscellaneous.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), MiscellaneousActivity.class);
-//                startActivity(intent);
-            }
-        });
 
     }
 

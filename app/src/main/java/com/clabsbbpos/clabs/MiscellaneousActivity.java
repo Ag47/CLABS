@@ -16,7 +16,7 @@ public class MiscellaneousActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 //        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
 //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_miscellaneous);
 
         // custom action bar
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
@@ -29,22 +29,6 @@ public class MiscellaneousActivity extends ActionBarActivity {
 
         TextView activityTitle = (TextView) findViewById(R.id.activity_title);
         activityTitle.setTypeface(iconFont);
-
-        TextView mealType = (TextView) findViewById(R.id.mealType);
-        mealType.setTypeface(arialFont);
-
-        TextView timeServed = (TextView) findViewById(R.id.time_served);
-        timeServed.setTypeface(arialFont);
-
-        TextView set = (TextView) findViewById(R.id.set);
-        set.setTypeface(arialFont);
-
-        TextView totalPrice = (TextView) findViewById(R.id.totalPrice);
-        totalPrice.setTypeface(arialFont);
-
-        TextView order = (TextView) findViewById(R.id.order);
-        order.setTypeface(arialFont, Typeface.BOLD);
-
 
         TextView hotelName = (TextView) findViewById(R.id.hotel_name);
         hotelName.setTypeface(hotelFont);

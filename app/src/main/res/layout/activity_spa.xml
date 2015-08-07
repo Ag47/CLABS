@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_color"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/activity_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="100px"
+                android:text="Hotel Facilities"
+                android:textColor="@color/white"
+                android:textSize="28px" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer_layout"
+        android:layout_below="@id/tool_bar"
+        android:background="#B1A16D">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15px"
+                android:layout_marginRight="15px"
+                android:layout_marginTop="100px"
+                android:background="#55FFFFFF"
+                android:padding="10px">
+
+                <ImageView
+                    android:id="@+id/spa_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="256px"
+                    android:src="@drawable/spa" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/spa_image"
+                    android:layout_below="@+id/spa_image"
+                    android:text="\tI"
+                    android:textSize="25px"
+                    android:textStyle="italic|bold" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spa_image"
+                    android:layout_marginTop="5px"
+                    android:text="\t  -Spa is Hong Kong's first spa to incorporate the principles of feng shui into its urban retreat design. Professional therapists specializing in Oriental healing offer signature treatments such as the “I-Spa Five Elements” and “Pearl of the Orient” to relax, rejuvenate and rebalance the entire being. In addition to tranquil treatment rooms, the spa has five granite-clad, private spa suites, each with its own sauna, Jacuzzi and steam shower.\n\nSIGNATURE PACKAGES
+\t\tWe combined some of our most popular treatments to create exclusive experiences tailored to specific needs.
+\n►I-SPA Sampler: 3 hours and 30 minutes (excluding lunch time)
+Experience a variety of I-SPA's diverse treatments for the face and body.
+\t•\t\tThermal Mineral Bath (30 minutes)
+\t•\t\tScrub of the season (30 minutes)
+\t•\t\tOrganic Aromatherapy Massage (30 minutes)
+\t•\t\tIno-Sensi Facial (1hour, 30 minutes)"
+                    android:textSize="20px"
+                    android:textStyle="italic" />
+
+                <ImageView
+                    android:id="@+id/gallery"
+                    android:layout_width="175px"
+                    android:layout_height="56px"
+                    android:layout_below="@id/description"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="30px"
+                    android:src="@drawable/button_gallery" />
+
+                <ImageView
+                    android:id="@+id/reservation"
+                    android:layout_width="175px"
+                    android:layout_height="56px"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/description"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="30px"
+                    android:src="@drawable/button_reservation" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_below="@id/tool_bar"
+        android:background="#88FFFFFF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:text="Spa Facilities"
+            android:textSize="25px"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:src="@drawable/ic_contact" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/theme_color">
+
+        <TextView
+            android:id="@+id/hotel_name"
+            android:layout_width="wrap_content"
+            android:layout_height="25px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25px"
+            android:text="InterContinental"
+            android:textColor="@color/white"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/room_number"
+            android:layout_width="wrap_content"
+            android:layout_height="25px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25px"
+            android:text="Room 1001"
+            android:textColor="@color/white"
+            android:textSize="25px" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

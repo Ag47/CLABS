@@ -53,9 +53,9 @@
                 android:id="@+id/mealType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60px"
+                android:layout_marginTop="50px"
                 android:layout_toRightOf="@id/food"
-                android:text="Breakfast"
+                android:text="Miscellaneous"
                 android:textColor="@color/white"
                 android:textSize="25px" />
 
@@ -66,46 +66,33 @@
                 android:layout_below="@id/mealType"
                 android:layout_marginTop="10px"
                 android:layout_toRightOf="@id/food"
-                android:text="*\tserved daily from 6:00a.m.\n \tuntil 11:30a.m."
+                android:text="*\tthe green button xyz\nxyz\nxyz"
                 android:textColor="@color/white" />
         </RelativeLayout>
 
         <TextView
             android:id="@+id/set"
             android:layout_width="match_parent"
-            android:layout_height="100px"
+            android:layout_height="match_parent"
             android:layout_below="@id/mealLayout"
             android:background="#CCB1A16D"
             android:gravity="center_vertical"
+            android:lineSpacingExtra="20px"
             android:paddingLeft="20px"
-            android:text="Continental Breakfast\nchef's morning bakery basket\n$ 80.00"
+            android:text="Crib\nIndividually Controlled Air Conditioning\nIron / Ironing Board\nNumber of Closets in Executive Rooms: 1\nNumber of Closets in Some Rooms: 1\nNumber of Closets in Suites: 1\nRollaway Bed/Cot\nSeparate Hanging Closet"
             android:textColor="@color/white"
-            android:textSize="20px"></TextView>
+            android:textSize="23px"></TextView>
+
+        <ImageView
+            android:id="@+id/contact"
+            android:layout_width="122px"
+            android:layout_height="122px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20px"
+            android:layout_marginRight="20px"
+            android:src="@drawable/ic_contact" />
     </RelativeLayout>
-
-    <TextView
-        android:id="@+id/totalPrice"
-        android:layout_width="384px"
-        android:layout_height="50px"
-        android:layout_above="@+id/footer_layout"
-        android:background="#CC755324"
-        android:gravity="right|center_vertical"
-        android:paddingRight="50px"
-        android:text="Total : $ 80.00"
-        android:textColor="@color/white"
-        android:textSize="25px" />
-
-    <TextView
-        android:id="@+id/order"
-        android:layout_width="96px"
-        android:layout_height="50px"
-        android:layout_above="@+id/footer_layout"
-        android:layout_toRightOf="@id/totalPrice"
-        android:background="#88755324"
-        android:gravity="center"
-        android:text="Order"
-        android:textColor="@color/white"
-        android:textSize="25px" />
 
     <RelativeLayout
         android:id="@+id/footer_layout"

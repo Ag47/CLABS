@@ -34,7 +34,7 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/footer_layout"
         android:layout_below="@id/tool_bar"
-        android:background="@drawable/roomservice_banner">
+        android:background="@drawable/meal_bg">
 
         <RelativeLayout
             android:id="@+id/mealLayout"

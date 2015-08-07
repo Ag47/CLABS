@@ -138,8 +138,8 @@ public class HomeActivity extends ActionBarActivity implements WisePosController
         hotelfacilitiesLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), .class);
-//                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), FacilitiesActivity.class);
+                startActivity(intent);
             }
         });
 

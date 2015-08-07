@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class FacilitiesActivity extends ActionBarActivity {
@@ -17,7 +18,7 @@ public class FacilitiesActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 //        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
 //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_roomservice);
+        setContentView(R.layout.activity_facilities);
 
         // custom action bar
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
@@ -31,43 +32,27 @@ public class FacilitiesActivity extends ActionBarActivity {
         TextView activityTitle = (TextView) findViewById(R.id.activity_title);
         activityTitle.setTypeface(iconFont);
 
-        TextView inRoomDining = (TextView) findViewById(R.id.inRoomDining);
-        inRoomDining.setTypeface(arialFont);
-
-        TextView houseKeeping = (TextView) findViewById(R.id.houseKeeping);
-        houseKeeping.setTypeface(arialFont);
-
-        TextView miscellaneous = (TextView) findViewById(R.id.miscellaneous);
-        miscellaneous.setTypeface(arialFont);
-
         TextView hotelName = (TextView) findViewById(R.id.hotel_name);
         hotelName.setTypeface(hotelFont);
 
         TextView roomNumber = (TextView) findViewById(R.id.room_number);
         roomNumber.setTypeface(hotelFont);
 
-        inRoomDining.setOnClickListener(new View.OnClickListener() {
+        RelativeLayout fitnessLayout = (RelativeLayout) findViewById(R.id.fitness_layout);
+        fitnessLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), InRoomDiningActivity.class);
+                Intent intent = new Intent(getApplicationContext(), FitnessActivity.class);
                 startActivity(intent);
             }
         });
 
-        houseKeeping.setOnClickListener(new View.OnClickListener() {
+        RelativeLayout spaLayout = (RelativeLayout) findViewById(R.id.spa_layout);
+        spaLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), HouseKeepingActivity.class);
+                Intent intent = new Intent(getApplicationContext(), SpaActivity.class);
                 startActivity(intent);
-            }
-        });
-
-        // TODO miscellaneous Activity
-        miscellaneous.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), MiscellaneousActivity.class);
-//                startActivity(intent);
             }
         });
 

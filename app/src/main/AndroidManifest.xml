@@ -19,17 +19,17 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo_clabs"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
             android:name=".StartActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
-            <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity
             android:name=".LoginActivity"
@@ -46,10 +46,10 @@
         <activity
             android:name=".HomeActivity"
             android:screenOrientation="portrait">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
 
@@ -73,20 +73,35 @@
 
         <activity
             android:name=".InRoomDiningActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".MenuActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".HouseKeepingActivity"
-            android:screenOrientation="portrait">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".MiscellaneousActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".FacilitiesActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".FitnessActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".SpaActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ReservationActivity"
+            android:screenOrientation="portrait" />
 
         <activity
             android:name=".CardActivity"
@@ -97,6 +112,7 @@
             <!--</intent-filter>-->
 
         </activity>
+
     </application>
 
 </manifest>

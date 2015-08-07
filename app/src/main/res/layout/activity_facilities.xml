@@ -21,63 +21,159 @@
                 android:id="@+id/activity_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:layout_marginLeft="100px"
-                android:text="Room Service"
+                android:text="Hotel Facilities"
                 android:textColor="@color/white"
                 android:textSize="28px" />
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
-
-    <ImageView
-        android:id="@+id/banner"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="200px"
-        android:src="@drawable/roomservice_banner"
-        android:layout_below="@+id/tool_bar"
-        android:scaleType="fitXY" />
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer_layout"
+        android:layout_below="@id/tool_bar"
+        android:background="#B1A16D">
 
-    <TextView
-        android:id="@+id/inRoomDining"
-        android:layout_width="match_parent"
-        android:layout_height="60px"
-        android:layout_below="@id/banner"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="50px"
-        android:layout_marginTop="20px"
-        android:background="#B1A16D"
-        android:gravity="center"
-        android:text="In Room Dining"
-        android:textColor="@color/white"
-        android:textSize="25px" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/houseKeeping"
-        android:layout_width="match_parent"
-        android:layout_height="60px"
-        android:layout_below="@id/inRoomDining"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="50px"
-        android:layout_marginTop="20px"
-        android:background="#B1A16D"
-        android:gravity="center"
-        android:text="Housekeeping"
-        android:textColor="@color/white"
-        android:textSize="25px" />
+            <RelativeLayout
+                android:id="@+id/fitness_layout"
+                android:layout_width="match_parent"
+                android:layout_height="210px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="30px"
+                android:background="@drawable/fitness">
 
-    <TextView
-        android:id="@+id/miscellaneous"
-        android:layout_width="match_parent"
-        android:layout_height="60px"
-        android:layout_below="@id/houseKeeping"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="50px"
-        android:layout_marginTop="20px"
-        android:background="#B1A16D"
-        android:gravity="center"
-        android:text="Miscellaneous"
-        android:textColor="@color/white"
-        android:textSize="25px" />
+                <TextView
+                    android:id="@+id/health_title"
+                    android:layout_width="295px"
+                    android:layout_height="60px"
+                    android:layout_marginTop="50px"
+                    android:background="#CC755324"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15px"
+                    android:text="Health And\nFitness Center"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30px"
+                    android:layout_below="@id/health_title"
+                    android:layout_marginTop="30px"
+                    android:background="#4C000000"
+                    android:paddingLeft="15px"
+                    android:text="opens 24 hours daily\t\tno additional cost"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/spa_layout"
+                android:layout_width="match_parent"
+                android:layout_height="210px"
+                android:layout_below="@id/fitness_layout"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="30px"
+                android:background="@drawable/spa">
+
+                <TextView
+                    android:id="@+id/spa_title"
+                    android:layout_width="295px"
+                    android:layout_height="60px"
+                    android:layout_marginTop="50px"
+                    android:background="#CC755324"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15px"
+                    android:text="Spa Facilities"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30px"
+                    android:layout_below="@id/spa_title"
+                    android:layout_marginTop="30px"
+                    android:background="#4C000000"
+                    android:paddingLeft="15px"
+                    android:text="opens 24 hours daily\t\t\tsee the price"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/swimming_layout"
+                android:layout_width="match_parent"
+                android:layout_height="210px"
+                android:layout_below="@id/spa_layout"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="30px"
+                android:background="@drawable/swimming_pool">
+
+                <TextView
+                    android:id="@+id/swimming_title"
+                    android:layout_width="295px"
+                    android:layout_height="60px"
+                    android:layout_marginTop="50px"
+                    android:background="#CC755324"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15px"
+                    android:text="Outdoor\nSwimming Pool"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30px"
+                    android:layout_below="@id/swimming_title"
+                    android:layout_marginTop="30px"
+                    android:background="#4C000000"
+                    android:paddingLeft="15px"
+                    android:text="opens 24 hours daily\t\tno additional cost"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/restaurant_layout"
+                android:layout_width="match_parent"
+                android:layout_height="210px"
+                android:layout_below="@id/swimming_layout"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="30px"
+                android:background="@drawable/restaurant">
+
+                <TextView
+                    android:id="@+id/restaurant_title"
+                    android:layout_width="295px"
+                    android:layout_height="60px"
+                    android:layout_marginTop="50px"
+                    android:background="#CC755324"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15px"
+                    android:text="Restaurant"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30px"
+                    android:layout_below="@id/restaurant_title"
+                    android:layout_marginTop="30px"
+                    android:background="#4C000000"
+                    android:paddingLeft="15px"
+                    android:text="opens 24 hours daily\t\t\tsee the price"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </ScrollView>
 
 
     <RelativeLayout

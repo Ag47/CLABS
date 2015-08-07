@@ -51,16 +51,16 @@
                 android:padding="10px">
 
                 <ImageView
-                    android:id="@+id/fitness_image"
+                    android:id="@+id/spa_image"
                     android:layout_width="match_parent"
                     android:layout_height="256px"
-                    android:src="@drawable/fitness" />
+                    android:src="@drawable/restaurant" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/fitness_image"
-                    android:layout_below="@+id/fitness_image"
+                    android:layout_alignStart="@+id/spa_image"
+                    android:layout_below="@+id/spa_image"
                     android:text="\tT"
                     android:textSize="25px"
                     android:textStyle="italic|bold" />
@@ -69,32 +69,33 @@
                     android:id="@+id/description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/fitness_image"
+                    android:layout_below="@id/spa_image"
                     android:layout_marginTop="5px"
-                    android:text="\t   he Fitness Centre opens 24 hours daily includes a complete range of cardio-vascular equipment with individual LCD televisions, changing rooms with lockers and a retail area featuring an extensive range of beauty and skin products."
+                    android:text="\t   he ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare mi sed luctus sagittis. Donec consectetur ex ut magna viverra finibus. Vivamus quis ante sapien."
                     android:textSize="20px"
                     android:textStyle="italic" />
-
-                <TextView
-                    android:id="@+id/bullet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/description"
-                    android:layout_marginTop="30px"
-                    android:text="\t&#8226;\tHealth/Fitness Center On-Site\n\t&#8226;\tFitness Center Type: EXTENSIVE\n\t&#8226;\tOpening hours: 24 hours daily" />
 
                 <ImageView
                     android:id="@+id/gallery"
                     android:layout_width="175px"
                     android:layout_height="56px"
-                    android:layout_below="@id/bullet"
-                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/description"
+                    android:layout_marginLeft="20px"
                     android:layout_marginTop="30px"
                     android:src="@drawable/button_gallery" />
 
+                <ImageView
+                    android:id="@+id/reservation"
+                    android:layout_width="175px"
+                    android:layout_height="56px"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/description"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="30px"
+                    android:src="@drawable/button_reservation" />
+
             </RelativeLayout>
         </RelativeLayout>
-
 
     </ScrollView>
 
@@ -109,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20px"
-            android:text="Health And Fitness Center"
+            android:text="Restaurant"
             android:textSize="25px"
             android:textStyle="bold" />
 

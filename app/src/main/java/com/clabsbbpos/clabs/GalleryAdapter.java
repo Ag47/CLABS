@@ -9,14 +9,16 @@ import android.widget.ImageView;
 
 public class GalleryAdapter extends PagerAdapter {
     Context context;
-    private int[] GalImages = new int[] {
+    private int[] GalImages = new int[]{
             R.drawable.logo_clabs,
             R.drawable.logo_clabs,
             R.drawable.logo_clabs
     };
-    GalleryAdapter(Context context){
-        this.context=context;
+
+    GalleryAdapter(Context context) {
+        this.context = context;
     }
+
     @Override
     public int getCount() {
         return GalImages.length;

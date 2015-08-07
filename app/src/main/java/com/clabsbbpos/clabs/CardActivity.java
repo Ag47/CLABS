@@ -69,48 +69,58 @@ import javax.crypto.spec.SecretKeySpec;
 public class CardActivity extends Activity {
 
     protected static final String[] DEVICE_NAMES = new String[]{"WisePad", "WP", "MPOS", "M360", "M368"};
-
+    protected static String masterKey = "11223344556677889900AABBCCDDEEFF";
+    protected static String pinSessionKey = "A1223344556677889900AABBCCDDEEFF";
+    protected static String encryptedPinSessionKey = "";
+    protected static String pinKcv = "";
+    protected static String dataSessionKey = "A2223344556677889900AABBCCDDEEFF";
+    protected static String encryptedDataSessionKey = "";
+    protected static String dataKcv = "";
+    protected static String trackSessionKey = "A4223344556677889900AABBCCDDEEFF";
+    protected static String encryptedTrackSessionKey = "";
+    protected static String trackKcv = "";
+    protected static String macSessionKey = "A6223344556677889900AABBCCDDEEFF";
+    protected static String encryptedMacSessionKey = "";
+    protected static String macKcv = "";
+    protected static CheckCardMode checkCardMode;
+    protected ArrayAdapter<String> arrayAdapter;
+    protected List<BluetoothDevice> foundDevices;
     private Handler handler;
-
     private Button startButton;
     private EditText amountEditText;
     private EditText statusEditText;
     private ListView appListView;
     private Dialog dialog;
-
     private WisePosController wisePosController;
     private BarcodeReaderController barcodeReaderController;
-
     private String amount = "";
     private String cashbackAmount = "";
     private boolean isPinCanceled = false;
-
-    protected ArrayAdapter<String> arrayAdapter;
-    protected List<BluetoothDevice> foundDevices;
-
     private ArrayList<byte[]> receipts;
-
-    protected static String masterKey = "11223344556677889900AABBCCDDEEFF";
-
-    protected static String pinSessionKey = "A1223344556677889900AABBCCDDEEFF";
-    protected static String encryptedPinSessionKey = "";
-    protected static String pinKcv = "";
-
-    protected static String dataSessionKey = "A2223344556677889900AABBCCDDEEFF";
-    protected static String encryptedDataSessionKey = "";
-    protected static String dataKcv = "";
-
-    protected static String trackSessionKey = "A4223344556677889900AABBCCDDEEFF";
-    protected static String encryptedTrackSessionKey = "";
-    protected static String trackKcv = "";
-
-    protected static String macSessionKey = "A6223344556677889900AABBCCDDEEFF";
-    protected static String encryptedMacSessionKey = "";
-    protected static String macKcv = "";
-
-    protected static CheckCardMode checkCardMode;
-
     private Context context;
+
+    private static byte[] hexToByteArray(String s) {
+        if (s == null) {
+            s = "";
+        }
+        ByteArrayOutputStream bout = new ByteArrayOutputStream();
+        for (int i = 0; i < s.length() - 1; i += 2) {
+            String data = s.substring(i, i + 2);
+            bout.write(Integer.parseInt(data, 16));
+        }
+        return bout.toByteArray();
+    }
+
+    private static String toHexString(byte[] b) {
+        if (b == null) {
+            return "null";
+        }
+        String result = "";
+        for (int i = 0; i < b.length; i++) {
+            result += Integer.toString((b[i] & 0xFF) + 0x100, 16).substring(1);
+        }
+        return result;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -614,29 +624,6 @@ public class CardActivity extends Activity {
         });
 
         dialog.show();
-    }
-
-    private static byte[] hexToByteArray(String s) {
-        if (s == null) {
-            s = "";
-        }
-        ByteArrayOutputStream bout = new ByteArrayOutputStream();
-        for (int i = 0; i < s.length() - 1; i += 2) {
-            String data = s.substring(i, i + 2);
-            bout.write(Integer.parseInt(data, 16));
-        }
-        return bout.toByteArray();
-    }
-
-    private static String toHexString(byte[] b) {
-        if (b == null) {
-            return "null";
-        }
-        String result = "";
-        for (int i = 0; i < b.length; i++) {
-            result += Integer.toString((b[i] & 0xFF) + 0x100, 16).substring(1);
-        }
-        return result;
     }
 
     public void dismissDialog() {

@@ -28,8 +28,56 @@ public class ScanActivity extends Activity {
     private PictureCallback mPicture;
     private Button capture, switchCamera;
     private Context myContext;
+    OnClickListener captrureListener = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            mCamera.takePicture(null, null, mPicture);
+            Intent intent = new Intent(myContext, InstructionActivity.class);
+            startActivity(intent);
+        }
+    };
     private LinearLayout cameraPreview;
     private boolean cameraFront = false;
+    OnClickListener switchCameraListener = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            //get the number of cameras
+            int camerasNumber = Camera.getNumberOfCameras();
+            if (camerasNumber > 1) {
+                //release the old camera instance
+                //switch camera, from the front and the back and vice versa
+
+                releaseCamera();
+                chooseCamera();
+            } else {
+                Toast toast = Toast.makeText(myContext, "Sorry, your phone has only one camera!", Toast.LENGTH_LONG);
+                toast.show();
+            }
+        }
+    };
+
+    //make picture and save to a folder
+    private static File getOutputMediaFile() {
+        //make a new file directory inside the "sdcard" folder
+        File mediaStorageDir = new File("/sdcard/", "CLABS");
+
+        //if this "JCGCamera folder does not exist
+        if (!mediaStorageDir.exists()) {
+            //if you cannot make this folder return
+            if (!mediaStorageDir.mkdirs()) {
+                return null;
+            }
+        }
+
+        //take the current timeStamp
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        File mediaFile;
+        //and make a media file:
+//        mediaFile = new File(mediaStorageDir.getPath() + File.separator + "IMG_" + timeStamp + ".jpg");
+        mediaFile = new File(mediaStorageDir.getPath() + File.separator + "passport.jpg");
+
+        return mediaFile;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -105,24 +153,6 @@ public class ScanActivity extends Activity {
         switchCamera.setOnClickListener(switchCameraListener);
     }
 
-    OnClickListener switchCameraListener = new OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            //get the number of cameras
-            int camerasNumber = Camera.getNumberOfCameras();
-            if (camerasNumber > 1) {
-                //release the old camera instance
-                //switch camera, from the front and the back and vice versa
-
-                releaseCamera();
-                chooseCamera();
-            } else {
-                Toast toast = Toast.makeText(myContext, "Sorry, your phone has only one camera!", Toast.LENGTH_LONG);
-                toast.show();
-            }
-        }
-    };
-
     public void chooseCamera() {
         //if the camera preview is the front
         if (cameraFront) {
@@ -194,38 +224,6 @@ public class ScanActivity extends Activity {
             }
         };
         return picture;
-    }
-
-    OnClickListener captrureListener = new OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            mCamera.takePicture(null, null, mPicture);
-            Intent intent = new Intent(myContext, InstructionActivity.class);
-            startActivity(intent);
-        }
-    };
-
-    //make picture and save to a folder
-    private static File getOutputMediaFile() {
-        //make a new file directory inside the "sdcard" folder
-        File mediaStorageDir = new File("/sdcard/", "CLABS");
-
-        //if this "JCGCamera folder does not exist
-        if (!mediaStorageDir.exists()) {
-            //if you cannot make this folder return
-            if (!mediaStorageDir.mkdirs()) {
-                return null;
-            }
-        }
-
-        //take the current timeStamp
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        File mediaFile;
-        //and make a media file:
-//        mediaFile = new File(mediaStorageDir.getPath() + File.separator + "IMG_" + timeStamp + ".jpg");
-        mediaFile = new File(mediaStorageDir.getPath() + File.separator + "passport.jpg");
-
-        return mediaFile;
     }
 
     private void releaseCamera() {

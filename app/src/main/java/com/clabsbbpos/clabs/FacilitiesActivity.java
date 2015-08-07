@@ -56,6 +56,24 @@ public class FacilitiesActivity extends ActionBarActivity {
             }
         });
 
+        RelativeLayout swimLayout = (RelativeLayout) findViewById(R.id.swimming_layout);
+        swimLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SwimActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        RelativeLayout restaurantLayout = (RelativeLayout) findViewById(R.id.restaurant_layout);
+        restaurantLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RestaurantActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override

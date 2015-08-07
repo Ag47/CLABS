@@ -38,6 +38,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
+            android:paddingBottom="30px"
             android:layout_height="match_parent">
 
             <RelativeLayout

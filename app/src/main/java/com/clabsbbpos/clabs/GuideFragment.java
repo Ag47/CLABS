@@ -24,7 +24,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-public class GuideFragment extends Fragment{
+public class GuideFragment extends Fragment {
 
     private int bgRes;
     private ImageView imageView;

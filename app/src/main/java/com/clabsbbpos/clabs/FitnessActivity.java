@@ -1,14 +1,20 @@
 package com.clabsbbpos.clabs;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class FitnessActivity extends ActionBarActivity {
+
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +22,8 @@ public class FitnessActivity extends ActionBarActivity {
 //        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
 //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_fitness);
+
+        context = getApplicationContext();
 
         // custom action bar
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
@@ -34,6 +42,16 @@ public class FitnessActivity extends ActionBarActivity {
 
         TextView roomNumber = (TextView) findViewById(R.id.room_number);
         roomNumber.setTypeface(hotelFont);
+
+        ImageView gallery = (ImageView) findViewById(R.id.gallery);
+        gallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // custom dialog
+                Intent intent = new Intent(getApplicationContext(), GalleryDialog.class);
+                startActivity(intent);
+            }
+        });
 
         // TODO call double confirm
 
@@ -69,4 +87,5 @@ public class FitnessActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

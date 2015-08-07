@@ -261,7 +261,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/directphonecall_layout"
+                    android:id="@+id/business_service_layout"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -275,16 +275,16 @@
                         android:layout_width="80px"
                         android:layout_height="80px"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/ic_call" />
+                        android:src="@drawable/ic_businessservices" />
 
                     <TextView
-                        android:id="@+id/directphonecall_tv"
+                        android:id="@+id/business_service_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/directphonecall_icon"
                         android:layout_marginTop="5px"
                         android:gravity="center"
-                        android:text="Direct\nPhone Calls"
+                        android:text="Business\nService"
                         android:textColor="@color/theme_color" />
                 </RelativeLayout>
             </LinearLayout>
@@ -297,7 +297,7 @@
                 android:weightSum="3">
 
                 <RelativeLayout
-                    android:id="@+id/more_layout"
+                    android:id="@+id/call_layout"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -307,20 +307,20 @@
                     android:padding="2px">
 
                     <ImageView
-                        android:id="@+id/more_icon"
+                        android:id="@+id/phone_icon"
                         android:layout_width="80px"
                         android:layout_height="80px"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/ic_more" />
+                        android:src="@drawable/ic_call" />
 
                     <TextView
-                        android:id="@+id/more_tv"
+                        android:id="@+id/phone_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/more_icon"
+                        android:layout_below="@id/phone_icon"
                         android:layout_marginTop="5px"
                         android:gravity="center"
-                        android:text="More"
+                        android:text="Direct\nPhone Call"
                         android:textColor="@color/theme_color" />
                 </RelativeLayout>
 
@@ -353,7 +353,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/checkout_layout"
+                    android:id="@+id/more_layout"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -363,20 +363,20 @@
                     android:padding="2px">
 
                     <ImageView
-                        android:id="@+id/checkout_icon"
+                        android:id="@+id/more_icon"
                         android:layout_width="80px"
                         android:layout_height="80px"
                         android:layout_centerHorizontal="true"
-                        android:src="@drawable/ic_checkout" />
+                        android:src="@drawable/ic_more" />
 
                     <TextView
-                        android:id="@+id/checkout_tv"
+                        android:id="@+id/more_tv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/checkout_icon"
+                        android:layout_below="@id/more_icon"
                         android:layout_marginTop="5px"
                         android:gravity="center"
-                        android:text="Check Out"
+                        android:text="More"
                         android:textColor="@color/theme_color" />
                 </RelativeLayout>
             </LinearLayout>

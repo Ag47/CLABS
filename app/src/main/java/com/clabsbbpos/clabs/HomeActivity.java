@@ -76,17 +76,17 @@ public class HomeActivity extends ActionBarActivity implements WisePosController
         TextView myReservationsTV = (TextView) findViewById(R.id.myreservations_tv);
         myReservationsTV.setTypeface(iconFont);
 
-        TextView callTV = (TextView) findViewById(R.id.directphonecall_tv);
-        callTV.setTypeface(iconFont);
+        TextView bizTV = (TextView) findViewById(R.id.business_service_tv);
+        bizTV.setTypeface(iconFont);
 
-        TextView moreTV = (TextView) findViewById(R.id.more_tv);
-        moreTV.setTypeface(iconFont);
+        TextView callTV = (TextView) findViewById(R.id.phone_tv);
+        callTV.setTypeface(iconFont);
 
         TextView locationTV = (TextView) findViewById(R.id.location_tv);
         locationTV.setTypeface(iconFont);
 
-        TextView checkoutTV = (TextView) findViewById(R.id.checkout_tv);
-        checkoutTV.setTypeface(iconFont);
+        TextView moreTV = (TextView) findViewById(R.id.more_tv);
+        moreTV.setTypeface(iconFont);
 
         // footer TextView
         TextView hotelName = (TextView) findViewById(R.id.hotel_name);
@@ -152,8 +152,8 @@ public class HomeActivity extends ActionBarActivity implements WisePosController
             }
         });
 
-        RelativeLayout callLayout = (RelativeLayout) findViewById(R.id.directphonecall_layout);
-        callLayout.setOnClickListener(new View.OnClickListener() {
+        RelativeLayout businessServiceLayout = (RelativeLayout) findViewById(R.id.business_service_layout);
+        businessServiceLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                Intent intent = new Intent(getApplicationContext(), .class);
@@ -161,8 +161,8 @@ public class HomeActivity extends ActionBarActivity implements WisePosController
             }
         });
 
-        RelativeLayout moreLayout = (RelativeLayout) findViewById(R.id.more_layout);
-        moreLayout.setOnClickListener(new View.OnClickListener() {
+        RelativeLayout callLayout = (RelativeLayout) findViewById(R.id.call_layout);
+        callLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                Intent intent = new Intent(getApplicationContext(), .class);
@@ -179,8 +179,8 @@ public class HomeActivity extends ActionBarActivity implements WisePosController
             }
         });
 
-        RelativeLayout checkoutLayout = (RelativeLayout) findViewById(R.id.checkout_layout);
-        checkoutLayout.setOnClickListener(new View.OnClickListener() {
+        RelativeLayout moreLayout = (RelativeLayout) findViewById(R.id.more_layout);
+        moreLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                Intent intent = new Intent(getApplicationContext(), .class);

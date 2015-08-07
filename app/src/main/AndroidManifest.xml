@@ -100,7 +100,19 @@
             android:screenOrientation="portrait" />
 
         <activity
+            android:name=".SwimActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".RestaurantActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".ReservationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".GalleryDialog"
             android:screenOrientation="portrait" />
 
         <activity

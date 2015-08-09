@@ -21,7 +21,7 @@ public class StartActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 // TODO switch back to LoginActiviy
-                Intent intent = new Intent(getApplicationContext(), ScanActivity.class);
+                Intent intent = new Intent(getApplicationContext(), CardActivity.class);
                 startActivity(intent);
             }
         });

@@ -71,16 +71,41 @@
         </RelativeLayout>
 
         <TextView
+            android:id="@+id/setQty"
+            android:layout_width="50px"
+            android:layout_height="100px"
+            android:layout_below="@id/mealLayout"
+            android:background="#CCB1A16D"
+            android:gravity="center_vertical"
+            android:paddingLeft="20px"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="20px"></TextView>
+
+        <TextView
             android:id="@+id/set"
             android:layout_width="match_parent"
             android:layout_height="100px"
             android:layout_below="@id/mealLayout"
+            android:layout_toRightOf="@id/setQty"
             android:background="#CCB1A16D"
             android:gravity="center_vertical"
             android:paddingLeft="20px"
             android:text="Continental Breakfast\nchef's morning bakery basket\n$ 80.00"
             android:textColor="@color/white"
             android:textSize="20px"></TextView>
+
+        <TextView
+            android:id="@+id/add"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/mealLayout"
+            android:background="@color/theme_color"
+            android:gravity="center"
+            android:text="Add"
+            android:textColor="@color/white"
+            android:textSize="20px" />
     </RelativeLayout>
 
     <TextView
@@ -91,7 +116,7 @@
         android:background="#CC755324"
         android:gravity="right|center_vertical"
         android:paddingRight="50px"
-        android:text="Total : $ 80.00"
+        android:text="Total : $ 0.00"
         android:textColor="@color/white"
         android:textSize="25px" />
 

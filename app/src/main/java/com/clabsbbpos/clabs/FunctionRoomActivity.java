@@ -1,13 +1,9 @@
 package com.clabsbbpos.clabs;
 
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,18 +11,14 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class FitnessActivity extends ActionBarActivity {
-
-    private Context context;
+public class FunctionRoomActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
 //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_fitness);
-
-        context = getApplicationContext();
+        setContentView(R.layout.activity_functionroom);
 
         // custom action bar
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
@@ -47,26 +39,15 @@ public class FitnessActivity extends ActionBarActivity {
         roomNumber.setTypeface(hotelFont);
 
         ImageView gallery = (ImageView) findViewById(R.id.gallery);
-        gallery.setOnClickListener(new View.OnClickListener() {
+
+        ImageView reservation = (ImageView) findViewById(R.id.reservation);
+        reservation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // custom dialog
-                Intent intent = new Intent(getApplicationContext(), GalleryDialog.class);
+                Intent intent = new Intent(getApplicationContext(), ReservationActivity.class);
                 startActivity(intent);
             }
         });
-
-        ImageView call = (ImageView) findViewById(R.id.call);
-        call.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent callIntent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "21800000"));
-                startActivity(callIntent);
-            }
-        });
-
-        // TODO call double confirm
-
     }
 
     @Override
@@ -99,5 +80,4 @@ public class FitnessActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 }

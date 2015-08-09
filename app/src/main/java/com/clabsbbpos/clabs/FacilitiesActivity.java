@@ -38,6 +38,25 @@ public class FacilitiesActivity extends ActionBarActivity {
         TextView roomNumber = (TextView) findViewById(R.id.room_number);
         roomNumber.setTypeface(hotelFont);
 
+        RelativeLayout restaurantLayout = (RelativeLayout) findViewById(R.id.restaurant_layout);
+        restaurantLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), RestaurantActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        RelativeLayout functionroomLayout = (RelativeLayout) findViewById(R.id.functionroom_layout);
+        functionroomLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), FunctionRoomActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         RelativeLayout fitnessLayout = (RelativeLayout) findViewById(R.id.fitness_layout);
         fitnessLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,15 +80,6 @@ public class FacilitiesActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), SwimActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        RelativeLayout restaurantLayout = (RelativeLayout) findViewById(R.id.restaurant_layout);
-        restaurantLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), RestaurantActivity.class);
                 startActivity(intent);
             }
         });

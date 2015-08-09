@@ -1,12 +1,15 @@
 package com.clabsbbpos.clabs;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MenuActivity extends ActionBarActivity {
 
@@ -39,7 +42,7 @@ public class MenuActivity extends ActionBarActivity {
         TextView set = (TextView) findViewById(R.id.set);
         set.setTypeface(arialFont);
 
-        TextView totalPrice = (TextView) findViewById(R.id.totalPrice);
+        final TextView totalPrice = (TextView) findViewById(R.id.totalPrice);
         totalPrice.setTypeface(arialFont);
 
         TextView order = (TextView) findViewById(R.id.order);
@@ -51,6 +54,26 @@ public class MenuActivity extends ActionBarActivity {
 
         TextView roomNumber = (TextView) findViewById(R.id.room_number);
         roomNumber.setTypeface(hotelFont);
+
+        final TextView add = (TextView) findViewById(R.id.add);
+        final int[] add_no = {0};
+        final TextView qty = (TextView) findViewById(R.id.setQty);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                qty.setText(Integer.toString(++add_no[0]));
+                totalPrice.setText("Total : $ " + add_no[0] * 80 + ".00");
+            }
+        });
+
+        order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                Toast.makeText(MenuActivity.this, "Thank you!", Toast.LENGTH_LONG).show();
+                startActivity(intent);
+            }
+        });
 
     }
 

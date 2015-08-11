@@ -147,8 +147,8 @@ public class HomeActivity extends ActionBarActivity implements WisePosController
         myReservationsLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), .class);
-//                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), MyBookingActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -156,8 +156,8 @@ public class HomeActivity extends ActionBarActivity implements WisePosController
         businessServiceLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), .class);
-//                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), BizServicesActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -165,8 +165,8 @@ public class HomeActivity extends ActionBarActivity implements WisePosController
         callLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), .class);
-//                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), DirectPhoneCallActivity.class);
+                startActivity(intent);
             }
         });
 

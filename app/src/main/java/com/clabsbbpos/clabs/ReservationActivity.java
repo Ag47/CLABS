@@ -35,6 +35,7 @@ public class ReservationActivity extends ActionBarActivity {
         TextView roomNumber = (TextView) findViewById(R.id.room_number);
         roomNumber.setTypeface(hotelFont);
 
+
     }
 
     @Override

@@ -122,6 +122,18 @@
             android:screenOrientation="portrait" />
 
         <activity
+            android:name=".MyBookingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".BizServicesActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".DirectPhoneCallActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".CardActivity"
             android:screenOrientation="portrait">
             <!--<intent-filter>-->

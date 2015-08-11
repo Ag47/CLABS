@@ -79,14 +79,14 @@
                 android:singleLine="true"
                 android:text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
                 android:textSize="20sp" />
+
             <TextView
                 android:id="@+id/checkOut"
                 android:layout_width="150px"
                 android:layout_height="30px"
-                android:text="Check-Out"
-                android:textSize="20sp"
                 android:layout_toRightOf="@id/marguee_message"
-                />
+                android:text="Check-Out"
+                android:textSize="20sp" />
         </RelativeLayout>
     </RelativeLayout>
 
@@ -256,7 +256,7 @@
                         android:layout_below="@id/myreservations_icon"
                         android:layout_marginTop="5px"
                         android:gravity="center"
-                        android:text="My\nReservations"
+                        android:text="My\nBooking"
                         android:textColor="@color/theme_color" />
                 </RelativeLayout>
 

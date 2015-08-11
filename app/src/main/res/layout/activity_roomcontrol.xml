@@ -48,11 +48,10 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20px"
-                android:text="All lights"
+                android:text="Bedside lamp"
                 android:textSize="35px" />
 
             <android.support.v7.widget.SwitchCompat
-                android:id="@+id/light_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -65,6 +64,72 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20px"
+                android:text="Ceiling Lamp"
+                android:textSize="35px" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10px"
+                android:shadowColor="@color/theme_color" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20px"
+                android:text="Washroom Lamp"
+                android:textSize="35px" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10px"
+                android:shadowColor="@color/theme_color" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20px"
+                android:text="Corridor Lamp"
+                android:textSize="35px" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10px"
+                android:shadowColor="@color/theme_color" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -106,13 +171,15 @@
                 android:layout_marginRight="5px"
                 android:layout_marginTop="5px"
                 android:layout_toLeftOf="@+id/temperature"
-                android:text="-"
-                android:textSize="35px" />
+                android:text="- "
+                android:textSize="45px"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/temperature"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_marginRight="5px"
                 android:layout_marginTop="5px"
                 android:layout_toLeftOf="@+id/temp_plus"
@@ -126,8 +193,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10px"
                 android:layout_marginTop="5px"
-                android:text="+"
-                android:textSize="35px" />
+                android:text=" +"
+                android:textSize="45px" />
 
         </RelativeLayout>
 

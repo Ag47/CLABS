@@ -1,12 +1,22 @@
 package com.clabsbbpos.clabs;
 
+import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DirectPhoneCallActivity extends ActionBarActivity {
 
@@ -34,6 +44,43 @@ public class DirectPhoneCallActivity extends ActionBarActivity {
 
         TextView roomNumber = (TextView) findViewById(R.id.room_number);
         roomNumber.setTypeface(hotelFont);
+
+        Spinner serviceSpinner = (Spinner) findViewById(R.id.service_spinner);
+        List<String> list = new ArrayList<String>();
+        list.add("General");
+        list.add("Room Service");
+        list.add("Other");
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, list);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        serviceSpinner.setAdapter(dataAdapter);
+
+        TextView phoneDial = (TextView) findViewById(R.id.phone_dialing);
+        phoneDial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + ""));
+                startActivity(intent);
+            }
+        });
+
+        ImageView csCall = (ImageView) findViewById(R.id.cs_dial);
+        csCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + ""));
+                startActivity(intent);
+            }
+        });
+
+        RelativeLayout roomToRoomCall = (RelativeLayout) findViewById(R.id.room_dial_layout);
+        roomToRoomCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + ""));
+                startActivity(intent);
+            }
+        });
 
 
     }

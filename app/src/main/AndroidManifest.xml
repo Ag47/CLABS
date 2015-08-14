@@ -134,6 +134,14 @@
             android:screenOrientation="portrait" />
 
         <activity
+            android:name=".LocationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".MoreActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".CardActivity"
             android:screenOrientation="portrait">
             <!--<intent-filter>-->

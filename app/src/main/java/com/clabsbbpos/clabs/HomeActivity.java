@@ -174,8 +174,8 @@ public class HomeActivity extends ActionBarActivity implements WisePosController
         locationLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), .class);
-//                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), LocationActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -183,8 +183,8 @@ public class HomeActivity extends ActionBarActivity implements WisePosController
         moreLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getApplicationContext(), .class);
-//                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), MoreActivity.class);
+                startActivity(intent);
             }
         });
 

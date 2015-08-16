@@ -10,7 +10,7 @@
         android:layout_height="234px"
         android:layout_marginLeft="25px"
         android:layout_marginRight="25px"
-        android:layout_marginTop="25px"
+        android:layout_marginTop="20px"
         android:background="@drawable/info_box">
 
         <TextView
@@ -18,8 +18,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="15px"
+            android:layout_marginTop="10px"
             android:text="5:10 AM"
+            android:textColor="@color/theme_color"
             android:textSize="45px" />
 
         <TextView
@@ -28,8 +29,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/time"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="15px"
+            android:layout_marginTop="10px"
             android:text="Thursday 23 July 2015"
+            android:textColor="@color/theme_color"
             android:textSize="30px" />
 
         <RelativeLayout
@@ -37,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/date"
-            android:layout_marginTop="15px">
+            android:layout_marginTop="10px">
 
             <ImageView
                 android:id="@+id/weather"
@@ -45,6 +47,7 @@
                 android:layout_height="40px"
                 android:layout_marginLeft="143px"
                 android:src="@drawable/ic_weather"
+                android:textColor="@color/theme_color"
                 android:tint="@color/theme_color" />
 
             <TextView
@@ -55,20 +58,21 @@
                 android:layout_marginLeft="25px"
                 android:layout_toRightOf="@id/weather"
                 android:text="28°C"
+                android:textColor="@color/theme_color"
                 android:textSize="40px" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="35px"
+            android:layout_height="45px"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="25px"
+            android:layout_marginTop="20px"
             android:background="@drawable/info_box">
 
             <TextView
                 android:id="@+id/marguee_message"
                 android:layout_width="280px"
-                android:layout_height="30px"
+                android:layout_height="match_parent"
                 android:ellipsize="marquee"
                 android:focusable="false"
                 android:gravity="center"
@@ -78,15 +82,19 @@
                 android:scrollHorizontally="true"
                 android:singleLine="true"
                 android:text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
+                android:textColor="@color/theme_color"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/checkOut"
                 android:layout_width="150px"
-                android:layout_height="30px"
+                android:layout_height="match_parent"
                 android:layout_toRightOf="@id/marguee_message"
+                android:background="@color/theme_color"
+                android:gravity="center"
                 android:text="Check-Out"
-                android:textSize="20sp" />
+                android:textColor="@color/white"
+                android:textSize="18sp" />
         </RelativeLayout>
     </RelativeLayout>
 
@@ -191,7 +199,7 @@
                         android:layout_below="@id/roomservice_icon"
                         android:layout_marginTop="5px"
                         android:gravity="center"
-                        android:text="Room\nService"
+                        android:text="Room\nServices"
                         android:textColor="@color/theme_color" />
                 </RelativeLayout>
             </LinearLayout>

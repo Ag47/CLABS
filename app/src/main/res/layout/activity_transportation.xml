@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_color"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/activity_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50px"
+                android:text="About InterContinental"
+                android:textColor="@color/white"
+                android:textSize="28px" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer_layout"
+        android:layout_below="@id/tool_bar"
+        android:background="#B1A16D">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="20px"
+                android:background="#FFFFFF"
+                android:padding="20px">
+
+                <ImageView
+                    android:id="@+id/hotel_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hotel_logo" />
+
+                <ImageView
+                    android:id="@+id/br"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hotel_logo"
+                    android:layout_marginBottom="10px"
+                    android:layout_marginTop="10px"
+                    android:src="@drawable/br" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/br"
+                    android:text="We’ve been on the international scene for over 60 years so none knows the world like we do. We love to share our knowledge with our guests and they love our understated service
+ and style. Located in more than 60 countries, we know that the affluent experienced traveller wants to be connected to what’s special about a destination.\n
+Find out more:\nwww.intercontinental.com\nwww.ihgplc.com" />
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/theme_color">
+
+        <TextView
+            android:id="@+id/hotel_name"
+            android:layout_width="wrap_content"
+            android:layout_height="25px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25px"
+            android:text="InterContinental"
+            android:textColor="@color/white"
+            android:textSize="25px" />
+
+        <TextView
+            android:id="@+id/room_number"
+            android:layout_width="wrap_content"
+            android:layout_height="25px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25px"
+            android:text="Room 1001"
+            android:textColor="@color/white"
+            android:textSize="25px" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,6 +1,7 @@
 package com.clabsbbpos.clabs;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -15,7 +16,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class LocationActivity extends ActionBarActivity {
 
@@ -46,22 +46,19 @@ public class LocationActivity extends ActionBarActivity {
 
         final String[] itemname = {
                 "Car Reservation",
-                "Transport Nearby",
-                "Map",
-                "Tourist Attractions"
+                "Transportation",
+                "Map"
         };
 
         final Integer[] imgid = {
                 R.drawable.carreservation,
                 R.drawable.transport,
                 R.drawable.map,
-                R.drawable.attractions
         };
         String[] itemtext = {
-                "taxi, chauffeured luxury cars\t\tbook now",
+                "chauffeured luxury cars\t\tbook now",
                 "MTR, bus, train information\tsee the details",
                 "Hotel location                            view the map",
-                "tourist information\tsee the details"
         };
         CustomListAdapter adapter = new CustomListAdapter(this, itemname, imgid, itemtext);
         ListView list = (ListView) findViewById(R.id.service_lv);
@@ -72,9 +69,23 @@ public class LocationActivity extends ActionBarActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                // TODO Auto-generated method stub
                 String Slecteditem = itemname[+position];
-                Toast.makeText(getApplicationContext(), Slecteditem, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), Slecteditem, Toast.LENGTH_SHORT).show();
+                Intent intent;
+                switch (position) {
+                    case 0:
+                        intent = new Intent(getApplicationContext(), CarReservationActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        intent = new Intent(getApplicationContext(), TransportationActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        intent = new Intent(getApplicationContext(), MapActivity.class);
+                        startActivity(intent);
+                        break;
+                }
 
             }
         });

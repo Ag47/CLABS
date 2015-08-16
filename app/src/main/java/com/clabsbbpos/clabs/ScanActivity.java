@@ -32,7 +32,7 @@ public class ScanActivity extends Activity {
         @Override
         public void onClick(View v) {
             mCamera.takePicture(null, null, mPicture);
-            Intent intent = new Intent(myContext, InstructionActivity.class);
+            Intent intent = new Intent(myContext, SuccessActivity.class);
             startActivity(intent);
         }
     };
@@ -50,8 +50,8 @@ public class ScanActivity extends Activity {
                 releaseCamera();
                 chooseCamera();
             } else {
-                Toast toast = Toast.makeText(myContext, "Sorry, your phone has only one camera!", Toast.LENGTH_LONG);
-                toast.show();
+//                Toast toast = Toast.makeText(myContext, "Sorry, your phone has only one camera!", Toast.LENGTH_LONG);
+//                toast.show();
             }
         }
     };
@@ -132,7 +132,7 @@ public class ScanActivity extends Activity {
         if (mCamera == null) {
             //if the front facing camera does not exist
             if (findFrontFacingCamera() < 0) {
-                Toast.makeText(this, "No front facing camera found.", Toast.LENGTH_LONG).show();
+//                Toast.makeText(this, "No front facing camera found.", Toast.LENGTH_LONG).show();
                 switchCamera.setVisibility(View.GONE);
             }
             mCamera = Camera.open(findBackFacingCamera());

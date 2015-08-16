@@ -1,11 +1,13 @@
 package com.clabsbbpos.clabs;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -37,6 +39,14 @@ public class SwimActivity extends ActionBarActivity {
         roomNumber.setTypeface(hotelFont);
 
         ImageView gallery = (ImageView) findViewById(R.id.gallery);
+        gallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // custom dialog
+                Intent intent = new Intent(getApplicationContext(), GalleryDialog.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

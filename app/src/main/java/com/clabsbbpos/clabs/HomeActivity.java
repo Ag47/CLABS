@@ -188,6 +188,15 @@ public class HomeActivity extends ActionBarActivity implements WisePosController
             }
         });
 
+        TextView checkout = (TextView) findViewById(R.id.checkOut);
+        checkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CheckOutActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override

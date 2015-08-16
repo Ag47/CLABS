@@ -67,21 +67,37 @@
                     android:textSize="20px"
                     android:textStyle="italic" />
 
+                <TextView
+                    android:id="@+id/dateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/description"
+                    android:layout_centerHorizontal="true"
+                    android:text="Date" />
+
                 <DatePicker
                     android:id="@+id/datePicker"
                     android:layout_width="wrap_content"
-                    android:layout_height="100px"
-                    android:calendarViewShown="false"
-                    android:layout_below="@id/description"></DatePicker>
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dateText"
+                    android:calendarViewShown="false"></DatePicker>
+
+                <TextView
+                    android:id="@+id/timeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/datePicker"
+                    android:layout_centerHorizontal="true"
+                    android:text="Time:" />
 
                 <TimePicker
                     android:id="@+id/timePicker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/datePicker"
-                    ></TimePicker>
+                    android:layout_below="@id/timeText"></TimePicker>
 
                 <ImageView
+                    android:id="@+id/confirmButton"
                     android:layout_width="175px"
                     android:layout_height="56px"
                     android:layout_below="@id/timePicker"

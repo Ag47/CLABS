@@ -13,286 +13,287 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:theme="@style/ThemeOverlay.AppCompat.Dark">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <TextView
+                android:id="@+id/activity_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80px"
+                android:text="Room Control"
+                android:textColor="@color/white"
+                android:textSize="28px" />
+        </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_centerHorizontal="true"
-        android:background="@color/theme_color">
-
-        <TextView
-            android:id="@+id/activity_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="Room Control"
-            android:textColor="@color/white"
-            android:textSize="40px" />
-    </RelativeLayout>
-
-
-    <LinearLayout
-        android:id="@+id/myInfoLayout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tool_bar"
-        android:divider="@color/theme_color"
-        android:orientation="vertical"
-        android:padding="10px">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer_layout"
+        android:layout_below="@id/tool_bar">
 
-        <RelativeLayout
+        <LinearLayout
+            android:id="@+id/myInfoLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20px">
 
-            <TextView
-                android:layout_width="wrap_content"
+            android:divider="@color/theme_color"
+            android:orientation="vertical"
+            android:padding="10px">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20px"
-                android:text="Bedside lamp"
-                android:textSize="35px" />
+                android:layout_marginTop="20px">
 
-            <android.support.v7.widget.SwitchCompat
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20px"
+                    android:text="Bedside lamp"
+                    android:textSize="35px" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10px"
+                    android:shadowColor="@color/theme_color" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10px"
-                android:shadowColor="@color/theme_color" />
+                android:layout_marginTop="10px">
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20px"
+                    android:text="Ceiling Lamp"
+                    android:textSize="35px" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px">
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10px"
+                    android:shadowColor="@color/theme_color" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20px"
-                android:text="Ceiling Lamp"
-                android:textSize="35px" />
+                android:layout_marginTop="10px">
 
-            <android.support.v7.widget.SwitchCompat
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20px"
+                    android:text="Washroom Lamp"
+                    android:textSize="35px" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10px"
+                    android:shadowColor="@color/theme_color" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10px"
-                android:shadowColor="@color/theme_color" />
+                android:layout_marginTop="10px">
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20px"
+                    android:text="Corridor Lamp"
+                    android:textSize="35px" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px">
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10px"
+                    android:shadowColor="@color/theme_color" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20px"
-                android:text="Washroom Lamp"
-                android:textSize="35px" />
+                android:layout_marginTop="20px">
 
-            <android.support.v7.widget.SwitchCompat
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20px"
+                    android:text="Air Conditioner"
+                    android:textSize="35px" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/aircon_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10px"
+                    android:shadowColor="@color/theme_color" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/temp_layout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10px"
-                android:shadowColor="@color/theme_color" />
+                android:layout_marginTop="10px"
+                android:visibility="gone">
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20px"
+                    android:text="Temperature"
+                    android:textSize="35px" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px">
+                <TextView
+                    android:id="@+id/temp_minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5px"
+                    android:layout_marginTop="5px"
+                    android:layout_toLeftOf="@+id/temperature"
+                    android:text="- "
+                    android:textSize="45px"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5px"
+                    android:layout_marginTop="5px"
+                    android:layout_toLeftOf="@+id/temp_plus"
+                    android:text="25°C"
+                    android:textSize="35px" />
+
+                <TextView
+                    android:id="@+id/temp_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10px"
+                    android:layout_marginTop="5px"
+                    android:text=" +"
+                    android:textSize="45px" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/swing_layout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20px"
-                android:text="Corridor Lamp"
-                android:textSize="35px" />
+                android:visibility="gone">
 
-            <android.support.v7.widget.SwitchCompat
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20px"
+                    android:text="Swing"
+                    android:textSize="35px" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10px"
+                    android:shadowColor="@color/theme_color" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fanSpeed_layout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10px"
-                android:shadowColor="@color/theme_color" />
+                android:visibility="gone">
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20px"
+                    android:text="Fan Speed"
+                    android:textSize="35px" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20px">
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10px"
+                    android:shadowColor="@color/theme_color" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20px"
-                android:text="Air Conditioner"
-                android:textSize="35px" />
+                android:layout_marginTop="20px">
 
-            <android.support.v7.widget.SwitchCompat
-                android:id="@+id/aircon_switch"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20px"
+                    android:text="TV"
+                    android:textSize="35px" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10px"
+                    android:shadowColor="@color/theme_color" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10px"
-                android:shadowColor="@color/theme_color" />
+                android:layout_marginTop="20px">
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20px"
+                    android:text="Do not Disturb"
+                    android:textSize="35px" />
 
-        <RelativeLayout
-            android:id="@+id/temp_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"
-            android:visibility="gone">
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10px"
+                    android:shadowColor="@color/theme_color" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20px"
-                android:text="Temperature"
-                android:textSize="35px" />
-
-            <TextView
-                android:id="@+id/temp_minus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5px"
-                android:layout_marginTop="5px"
-                android:layout_toLeftOf="@+id/temperature"
-                android:text="- "
-                android:textSize="45px"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/temperature"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="5px"
-                android:layout_marginTop="5px"
-                android:layout_toLeftOf="@+id/temp_plus"
-                android:text="25°C"
-                android:textSize="35px" />
-
-            <TextView
-                android:id="@+id/temp_plus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10px"
-                android:layout_marginTop="5px"
-                android:text=" +"
-                android:textSize="45px" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/swing_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20px"
-                android:text="Swing"
-                android:textSize="35px" />
-
-            <android.support.v7.widget.SwitchCompat
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10px"
-                android:shadowColor="@color/theme_color" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/fanSpeed_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20px"
-                android:text="Fan Speed"
-                android:textSize="35px" />
-
-            <android.support.v7.widget.SwitchCompat
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10px"
-                android:shadowColor="@color/theme_color" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20px">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20px"
-                android:text="TV"
-                android:textSize="35px" />
-
-            <android.support.v7.widget.SwitchCompat
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10px"
-                android:shadowColor="@color/theme_color" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20px">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20px"
-                android:text="Do not Disturb"
-                android:textSize="35px" />
-
-            <android.support.v7.widget.SwitchCompat
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="10px"
-                android:shadowColor="@color/theme_color" />
-
-        </RelativeLayout>
-    </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
 
     <RelativeLayout
         android:id="@+id/footer_layout"

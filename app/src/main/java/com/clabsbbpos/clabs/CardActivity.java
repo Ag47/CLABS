@@ -1476,7 +1476,7 @@ public class CardActivity extends Activity {
             wisePosController.sendTerminalTime(terminalTime);
             Log.i("BBPOS", "time " + terminalTime);
             statusEditText.setText(getString(R.string.request_terminal_time) + " " + terminalTime);
-            Intent intent = new Intent(context, HomeActivity.class);
+            Intent intent = new Intent(context, InstructPassportActivity.class);
             startActivity(intent);
         }
 

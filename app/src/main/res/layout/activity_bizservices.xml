@@ -71,23 +71,13 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/spa_image"
                     android:layout_marginTop="5px"
-                    android:text="\t   The hotel offers 24-hour concierge and business services. The Business Centre features work stations, a boardroom and private office, pls secretarial and translation services
-
-\t► 24-hour business services (fax, postage, \n\t\t\tphotocopying, delivery)
-\t► Business Centre with work stations, \n\t\t\tboardroom and private office
-\t► 24-hour Concierge services
-\t► Airline ticketing services
-\t► Secretarial and translation services"
+                    android:text="\t   The hotel offers 24-hour concierge and business services. The Business Centre features work stations, a boardroom and private office, pls secretarial and translation services\n\n► 24-hour business services (fax, postage, \n\t\t\tphotocopying, delivery)\n► Business Centre with work stations, \n\t\t\tboardroom and private office\n► 24-hour Concierge services\n► Airline ticketing services\n► Secretarial and translation services"
                     android:textSize="20px"
                     android:textStyle="italic" />
 
-
-
             </RelativeLayout>
         </RelativeLayout>
-
     </ScrollView>
-
 
     <RelativeLayout
         android:id="@+id/footer_layout"

@@ -11,7 +11,22 @@
         android:background="@color/theme_color"
         android:minHeight="?attr/actionBarSize"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+        app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/activity_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100px"
+                android:text="My Stay"
+                android:textColor="@color/white"
+                android:textSize="28px" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
 
     <LinearLayout
         android:id="@+id/myInfoLayout"
@@ -81,7 +96,8 @@
         android:clickable="true"
         android:padding="10px"
         android:text="My E-billing"
-        android:textSize="45px" />
+        android:textSize="45px"
+        android:visibility="gone" />
 
     <RelativeLayout
         android:id="@+id/footer_layout"

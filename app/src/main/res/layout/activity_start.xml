@@ -38,14 +38,13 @@
 
     <TextView
         android:id="@+id/checkIn"
-        android:background="@drawable/info_box"
-        android:layout_width="200px"
+        android:background="@drawable/button_touchtostart"
+        android:layout_width="350px"
         android:gravity="center"
         android:layout_height="100px"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:text="Check in"
-        android:textSize="30sp" />
+        />
 
 </RelativeLayout>

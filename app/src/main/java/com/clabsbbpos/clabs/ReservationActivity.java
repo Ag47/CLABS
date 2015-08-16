@@ -1,12 +1,17 @@
 package com.clabsbbpos.clabs;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ReservationActivity extends ActionBarActivity {
 
@@ -35,6 +40,20 @@ public class ReservationActivity extends ActionBarActivity {
         TextView roomNumber = (TextView) findViewById(R.id.room_number);
         roomNumber.setTypeface(hotelFont);
 
+        ImageView confirm = (ImageView) findViewById(R.id.confirmButton);
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Context context = getApplicationContext();
+                CharSequence text = "Reservation Confirmed";
+                int duration = Toast.LENGTH_LONG;
+
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

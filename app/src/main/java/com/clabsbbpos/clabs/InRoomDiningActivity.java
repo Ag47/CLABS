@@ -53,10 +53,35 @@ public class InRoomDiningActivity extends ActionBarActivity {
         breakfast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
-                startActivity(intent);
+                intentToMenuActivity();
             }
         });
+
+        allDayDining.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentToMenuActivity();
+            }
+        });
+
+        lateNight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentToMenuActivity();
+            }
+        });
+
+        childrenMeal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intentToMenuActivity();
+            }
+        });
+    }
+
+    private void intentToMenuActivity() {
+        Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+        startActivity(intent);
     }
 
     @Override

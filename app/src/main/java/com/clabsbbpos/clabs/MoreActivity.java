@@ -1,6 +1,7 @@
 package com.clabsbbpos.clabs;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -29,7 +30,7 @@ public class MoreActivity extends ActionBarActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setDisplayShowTitleEnabled(false);
+//        getActionBar().setDisplayShowTitleEnabled(false);
 
         Typeface hotelFont = Typeface.createFromAsset(getAssets(), "fonts/OptimusPrinceps.ttf");
         Typeface iconFont = Typeface.createFromAsset(getAssets(), "fonts/NuevaStd-Bold.otf");
@@ -61,8 +62,32 @@ public class MoreActivity extends ActionBarActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                // TODO Auto-generated method stub
                 String Slecteditem = itemname[+position];
+                Intent intent;
+                switch (position) {
+                    case 0:
+                        intent = new Intent(getApplicationContext(), PromotionPackageActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+//                        intent = new Intent(getApplicationContext(), PromotionPackageActivity.class);
+//                        startActivity(intent);
+                        break;
+                    case 2:
+                        intent = new Intent(getApplicationContext(), InstructionActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        intent = new Intent(getApplicationContext(), AboutActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        intent = new Intent(getApplicationContext(), TermsActivity.class);
+                        startActivity(intent);
+                        break;
+
+
+                }
                 Toast.makeText(getApplicationContext(), Slecteditem, Toast.LENGTH_SHORT).show();
 
             }

@@ -53,11 +53,11 @@ public class InstructionActivity extends ActionBarActivity {
     }
 
     private List<String> getTitles() {
-        return Lists.newArrayList("1", "2", "3", "4");
+        return Lists.newArrayList("1", "2", "3", "4", "5", "6", "7", "8", "9");
     }
 
     private List<Integer> getBgRes() {
-        return Lists.newArrayList(R.drawable.apink_hoempage, R.drawable.apink_hoempage, R.drawable.apink_hoempage, R.drawable.apink_hoempage);
+        return Lists.newArrayList(R.drawable.tutorial_1, R.drawable.tutorial_2, R.drawable.tutorial_3, R.drawable.tutorial_4, R.drawable.tutorial_5, R.drawable.tutorial_6, R.drawable.tutorial_7, R.drawable.tutorial_8, R.drawable.tutorial_9);
     }
 
     @Override

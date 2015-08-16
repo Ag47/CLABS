@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 public class MenuActivity extends ActionBarActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
